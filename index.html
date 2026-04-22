@@ -5,326 +5,1254 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>足場を組まずに、必要な高所作業だけを解決。｜株式会社4U ロープアクセス専門施工</title>
   <meta name="description" content="足場を組むほどではない高所作業を、ロープアクセス専門施工で安全・迅速に解決。外壁調査、部分補修、漏水補修、設備工事、狭小地や緊急対応まで対応します。" />
-  <meta name="theme-color" content="#0b1c14" />
+  <meta name="theme-color" content="#0a1712" />
   <style>
-    :root{
-      --bg:#f5fbf7;
-      --bg-soft:#eef7f1;
-      --surface:#ffffff;
-      --surface-2:#f9fcfa;
-      --hero:#07150f;
-      --hero-2:#0f261b;
-      --hero-3:#163b2c;
-      --text:#102019;
-      --text-soft:#4a6257;
-      --text-faint:#6f867c;
-      --line:#d9e7de;
-      --line-strong:#c5dccd;
-      --primary:#179b57;
-      --primary-strong:#0f7a43;
-      --primary-deep:#0a5d31;
-      --accent:#72e0aa;
-      --accent-soft:rgba(114,224,170,.16);
-      --warn:#fff8e8;
-      --warn-line:#f3ddb2;
-      --shadow:0 18px 40px rgba(8,20,15,.08);
-      --shadow-lg:0 30px 90px rgba(4,17,11,.22);
-      --radius-xl:34px;
-      --radius-lg:26px;
-      --radius-md:18px;
-      --radius-sm:14px;
-      --container:1180px;
-      --nav-h:78px;
+    :root {
+      --bg: #f4f7f5;
+      --bg-soft: #edf3ef;
+      --surface: rgba(255,255,255,.84);
+      --surface-strong: #ffffff;
+      --surface-dark: rgba(255,255,255,.08);
+      --text: #0f1f18;
+      --text-soft: #5d7067;
+      --text-faint: #83958d;
+      --line: rgba(15,31,24,.08);
+      --line-strong: rgba(15,31,24,.14);
+      --primary: #179b57;
+      --primary-strong: #0f7a43;
+      --primary-deep: #0a5d31;
+      --accent: #8ae0b4;
+      --accent-2: #d6fff1;
+      --hero-1: #07140f;
+      --hero-2: #10271c;
+      --hero-3: #173c2d;
+      --warning: #fff8ea;
+      --warning-line: #ecd8aa;
+      --shadow-xs: 0 8px 22px rgba(8, 20, 15, .06);
+      --shadow-sm: 0 18px 42px rgba(8, 20, 15, .08);
+      --shadow-lg: 0 34px 110px rgba(4, 17, 11, .22);
+      --radius-xs: 14px;
+      --radius-sm: 18px;
+      --radius-md: 24px;
+      --radius-lg: 32px;
+      --radius-xl: 42px;
+      --container: 1220px;
+      --nav-h: 82px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--text);
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(23,155,87,.05), transparent 28%),
-        linear-gradient(180deg,#f8fcf9 0%,#eff6f1 100%);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-      line-height:1.7;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+        radial-gradient(circle at 0% 0%, rgba(23,155,87,.07), transparent 22%),
+        radial-gradient(circle at 100% 0%, rgba(138,224,180,.10), transparent 20%),
+        linear-gradient(180deg, #f8fbf9 0%, var(--bg) 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    body.menu-open{overflow:hidden}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    button{font:inherit}
-    :focus-visible{
-      outline:3px solid rgba(23,155,87,.35);
-      outline-offset:3px;
-      border-radius:12px;
+    body.menu-open { overflow: hidden; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mix-blend-mode: overlay;
+      opacity: .35;
     }
 
-    .container{width:min(calc(100% - 32px),var(--container));margin:0 auto}
-    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{
-      left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:var(--text);z-index:1000;border-radius:999px;box-shadow:var(--shadow)
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    :focus-visible {
+      outline: 3px solid rgba(23,155,87,.34);
+      outline-offset: 3px;
+      border-radius: 14px;
     }
 
-    .nav-wrap{
-      position:sticky;top:0;z-index:100;background:rgba(7,21,15,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)
+    .container { width: min(calc(100% - 32px), var(--container)); margin: 0 auto; }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
-    .nav{
-      min-height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:18px;color:#eef8f1
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      width: auto;
+      height: auto;
+      padding: 10px 14px;
+      z-index: 200;
+      background: #fff;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
     }
-    .brand{display:inline-flex;align-items:center;gap:12px;min-width:0;font-weight:900;letter-spacing:.02em}
-    .brand-mark{
-      width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));
-      box-shadow:0 14px 30px rgba(23,155,87,.28);color:#fff;font-size:18px;font-weight:900
-    }
-    .brand-label{display:grid;line-height:1.18}
-    .brand-label small{font-size:11px;font-weight:700;letter-spacing:.08em;color:rgba(239,249,242,.68);text-transform:uppercase}
 
-    .nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:rgba(239,249,242,.84)}
-    .nav-links a{position:relative;padding:6px 0}
-    .nav-links a::after{
-      content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:999px;transform:scaleX(0);transform-origin:left;
-      background:linear-gradient(135deg,var(--accent),#fff);transition:transform .22s ease
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 120;
+      background: rgba(7, 20, 15, .66);
+      backdrop-filter: blur(18px) saturate(140%);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .nav-links a:hover::after{transform:scaleX(1)}
-    .nav-actions{display:flex;align-items:center;gap:12px}
-
-    .menu-toggle{
-      display:none;width:46px;height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;border-radius:14px;cursor:pointer;
-      align-items:center;justify-content:center;flex-direction:column;gap:5px;transition:background .2s ease, transform .2s ease
+    .nav {
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: #ecf7f0;
     }
-    .menu-toggle span{width:18px;height:2px;border-radius:999px;background:#fff;display:block;transition:transform .22s ease, opacity .22s ease}
-    .menu-toggle:hover{background:rgba(255,255,255,.12)}
-    .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-    .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-    .mobile-menu{
-      display:none;position:fixed;inset:var(--nav-h) 0 auto 0;background:rgba(7,21,15,.97);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow-lg);padding:10px 16px 18px
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
     }
-    .mobile-menu.is-open{display:block}
-    .mobile-menu-inner{width:min(calc(100% - 32px),var(--container));margin:0 auto;display:grid;gap:10px}
-    .mobile-menu a{color:#fff;padding:14px 16px;border-radius:16px;font-weight:800;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)}
-    .mobile-menu a.mobile-primary{background:linear-gradient(135deg,var(--primary),var(--primary-strong));border:none}
-
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border:none;cursor:pointer;border-radius:999px;font-size:15px;font-weight:800;
-      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;white-space:nowrap
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 16px 30px rgba(23,155,87,.32);
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: .02em;
     }
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{color:#fff;background:linear-gradient(135deg,var(--primary),var(--primary-strong));box-shadow:0 18px 34px rgba(15,122,67,.22)}
-    .btn-secondary{color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
-    .btn-light{color:var(--primary-deep);background:#e9f8ee;border:1px solid #d2ecd9}
-    .btn-ghost{color:var(--text);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .brand-copy {
+      display: grid;
+      line-height: 1.12;
+    }
+    .brand-copy small {
+      color: rgba(236,247,240,.66);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .brand-copy span {
+      font-weight: 900;
+      letter-spacing: -.01em;
+    }
 
-    .hero{
-      position:relative;overflow:hidden;color:#eef8f1;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(236,247,240,.84);
+    }
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), #fff);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+      box-shadow: 0 18px 34px rgba(15,122,67,.24);
+    }
+    .btn-secondary {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+    }
+    .btn-light {
+      color: var(--primary-deep);
+      background: linear-gradient(180deg, #edfff3, #dcf7e8);
+      border: 1px solid rgba(10,93,49,.08);
+      box-shadow: var(--shadow-xs);
+    }
+    .btn-ghost {
+      color: var(--text);
+      background: rgba(255,255,255,.8);
+      border: 1px solid rgba(15,31,24,.08);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #fff;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      transition: background .18s ease;
+    }
+    .menu-toggle span {
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: #fff;
+      display: block;
+      transition: transform .22s ease, opacity .22s ease;
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu-backdrop {
+      position: fixed;
+      inset: var(--nav-h) 0 0 0;
+      z-index: 108;
+      background: rgba(5,12,9,.34);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease;
+    }
+    .mobile-menu-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu {
+      position: fixed;
+      inset: calc(var(--nav-h) + 12px) 12px auto 12px;
+      z-index: 109;
+      opacity: 0;
+      transform: translateY(-10px) scale(.985);
+      pointer-events: none;
+      transition: opacity .22s ease, transform .22s ease;
+    }
+    .mobile-menu.is-open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    .mobile-menu-panel {
+      padding: 14px;
+      border-radius: 28px;
+      background: rgba(10,22,17,.92);
+      backdrop-filter: blur(18px) saturate(140%);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu-panel nav {
+      display: grid;
+      gap: 10px;
+    }
+    .mobile-menu-panel a {
+      padding: 15px 16px;
+      border-radius: 18px;
+      color: #fff;
+      font-weight: 800;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .mobile-menu-panel a.mobile-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+      border: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #eef7f1;
       background:
-        radial-gradient(circle at 8% 18%, rgba(23,155,87,.22), transparent 34%),
-        radial-gradient(circle at 88% 12%, rgba(107,217,163,.18), transparent 30%),
-        linear-gradient(135deg,var(--hero) 0%,var(--hero-2) 48%,var(--hero-3) 100%);
-      padding:88px 0 66px
+        radial-gradient(circle at 10% 18%, rgba(23,155,87,.24), transparent 30%),
+        radial-gradient(circle at 84% 12%, rgba(138,224,180,.16), transparent 28%),
+        linear-gradient(135deg, var(--hero-1) 0%, var(--hero-2) 48%, var(--hero-3) 100%);
+      padding: 98px 0 36px;
     }
-    .hero::before,.hero::after{content:"";position:absolute;border-radius:999px;filter:blur(18px);pointer-events:none;opacity:.58}
-    .hero::before{width:260px;height:260px;right:8%;top:10%;background:rgba(23,155,87,.16)}
-    .hero::after{width:180px;height:180px;left:8%;bottom:8%;background:rgba(107,217,163,.14)}
-    .hero-grid{
-      position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);gap:32px;align-items:start
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(18px);
+      opacity: .55;
+      pointer-events: none;
     }
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
-      color:#daf4e4;font-size:13px;font-weight:800;letter-spacing:.03em;margin-bottom:18px
+    .hero::before {
+      width: 280px;
+      height: 280px;
+      right: 6%;
+      top: 9%;
+      background: rgba(23,155,87,.18);
     }
-    h1,h2,h3,p{margin:0}
-    h1{font-size:clamp(36px,5vw,66px);line-height:1.05;letter-spacing:-.04em;font-weight:900;margin-bottom:16px}
-    .grad{
-      background:linear-gradient(135deg,#fff 0%,#d6f8e3 48%,#82e2b1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      left: 7%;
+      bottom: 10%;
+      background: rgba(138,224,180,.14);
     }
-    .lead{font-size:18px;color:rgba(239,249,242,.84);max-width:62ch}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0 14px}
-    .microcopy{font-size:13px;color:rgba(239,249,242,.72);margin-bottom:24px}
-    .hero-points{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-points span{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
-      color:#e7f8ed;font-size:14px;font-weight:700
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.03fr) minmax(360px, .97fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #dff5e8;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      font-size: clamp(40px, 5vw, 74px);
+      line-height: 1.02;
+      letter-spacing: -.05em;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+    .grad {
+      background: linear-gradient(135deg, #ffffff 0%, #dcffe8 42%, #91eabc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      max-width: 60ch;
+      color: rgba(238,247,241,.82);
+      font-size: 18px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 28px 0 14px;
+    }
+    .microcopy {
+      color: rgba(238,247,241,.72);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.10);
+      color: #eff9f3;
+      font-size: 14px;
+      font-weight: 700;
     }
 
-    .hero-card{
-      border-radius:var(--radius-xl);background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);padding:28px;box-shadow:var(--shadow-lg)
+    .hero-panel {
+      position: relative;
+      padding: 24px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(14px) saturate(130%);
+      overflow: hidden;
     }
-    .hero-card h2{font-size:24px;line-height:1.2;color:#fff;margin-bottom:12px}
-    .hero-card p{color:rgba(239,249,242,.78)}
-    .status{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(107,217,163,.12);border:1px solid rgba(130,226,177,.18);color:#c0f3d3;font-size:12px;font-weight:800;margin-bottom:16px
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: auto -20% 55% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(138,224,180,.18), transparent 68%);
+      pointer-events: none;
     }
-    .trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 22px}
-    .trust-item{padding:18px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
-    .trust-item strong{display:block;color:#fff;font-size:15px;margin-bottom:6px}
-    .trust-item span{display:block;color:rgba(239,249,242,.76);font-size:13px;line-height:1.6}
-    .hero-checklist{display:grid;gap:10px;margin:18px 0 22px}
-    .hero-check{
-      display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)
+    .hero-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
     }
-    .hero-check b{display:block;color:#fff;font-size:15px;margin-bottom:2px}
-    .hero-check span{color:rgba(239,249,242,.78);font-size:14px;line-height:1.55}
-    .check-dot{width:28px;height:28px;flex:0 0 28px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:900;font-size:13px;margin-top:1px}
-    .hero-contact-actions{display:grid;gap:10px}
-    .hero-mini{font-size:13px;color:rgba(239,249,242,.72);margin-top:10px}
-
-    .section{padding:90px 0}
-    .section-sm{padding-top:0}
-    .alt{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,0))}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
-    .section-head .copy{max-width:780px}
-    .kicker{display:inline-block;margin-bottom:10px;color:var(--primary-strong);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-    .section h2{font-size:clamp(28px,4vw,46px);line-height:1.14;letter-spacing:-.03em}
-    .section-head p{margin-top:12px;color:var(--text-soft);font-size:17px;max-width:68ch}
-
-    .grid-2,.grid-3,.grid-4,.service-grid,.flow-grid,.case-grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .flow-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-
-    .card{
-      background:rgba(255,255,255,.96);border:1px solid rgba(15,23,42,.06);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow)
+    .panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(138,224,180,.12);
+      border: 1px solid rgba(138,224,180,.18);
+      color: #cff8de;
+      font-size: 12px;
+      font-weight: 800;
     }
-    .card.dark{background:linear-gradient(180deg,#0d2017 0%,#133426 100%);color:#eef8f1;border-color:rgba(255,255,255,.08);box-shadow:var(--shadow-lg)}
-    .icon{
-      width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(23,155,87,.16),rgba(107,217,163,.18));
-      color:var(--primary-deep);font-weight:900;font-size:18px;margin-bottom:18px
+    .panel-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #9effc8;
+      box-shadow: 0 0 0 8px rgba(158,255,200,.12);
     }
-    .card.dark .icon{color:#fff;background:linear-gradient(135deg,rgba(23,155,87,.22),rgba(107,217,163,.20))}
-    .card h3{font-size:22px;line-height:1.25;letter-spacing:-.02em;margin-bottom:10px}
-    .card p,.card li,.card td,.card th{color:var(--text-soft);font-size:15px;margin:0}
-    .card.dark p,.card.dark li{color:rgba(239,249,242,.84)}
-
-    .badge{
-      display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;padding:6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--primary-deep);font-size:12px;font-weight:800
+    .hero-panel h2 {
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.18;
+      letter-spacing: -.03em;
+      margin-bottom: 10px;
     }
-    .mini-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
-    .mini-list li{position:relative;padding-left:18px}
-    .mini-list li::before{content:"";width:8px;height:8px;border-radius:999px;position:absolute;left:0;top:10px;background:linear-gradient(135deg,var(--primary),var(--accent))}
-    .split{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:22px;align-items:stretch}
-    .stack{display:grid;gap:18px}
-    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .tag{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;background:#edf8f1;color:#224f39;border:1px solid #d6ebdd;font-size:13px;font-weight:700}
-
-    .why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-    .qualify-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-    .qualify-card{padding:22px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .qualify-card strong{display:block;font-size:18px;margin-bottom:8px;letter-spacing:-.02em}
-    .qualify-card p{font-size:14px;color:var(--text-soft)}
-
-    .comparison{overflow-x:auto;margin-top:8px}
-    table{width:100%;border-collapse:collapse;min-width:680px}
-    th,td{padding:14px 16px;border-bottom:1px solid #e7efe9;text-align:left;vertical-align:top}
-    th{font-size:13px;color:#284833;background:#f3faf5;font-weight:800}
-    .comparison-note{
-      margin-top:14px;padding:18px 20px;border-radius:20px;background:var(--warn);border:1px solid var(--warn-line)
+    .hero-panel p {
+      color: rgba(238,247,241,.78);
+      font-size: 15px;
     }
-    .comparison-note strong{display:block;font-size:16px;margin-bottom:6px}
-    .comparison-note p{color:#5d5a4d;font-size:14px}
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .quick-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .quick-label {
+      display: block;
+      color: rgba(238,247,241,.66);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .quick-card strong {
+      display: block;
+      color: #fff;
+      font-size: 19px;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+      margin-bottom: 4px;
+    }
+    .quick-card span {
+      display: block;
+      color: rgba(238,247,241,.72);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .contact-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .contact-note {
+      margin-top: 12px;
+      color: rgba(238,247,241,.68);
+      font-size: 13px;
+      line-height: 1.6;
+    }
 
-    .price-card{display:grid;gap:14px;align-content:start}
-    .price-hero{padding:24px;border-radius:24px;background:linear-gradient(135deg,#0d2017,#143628);color:#fff;box-shadow:var(--shadow-lg)}
-    .price-hero strong{display:block;font-size:clamp(32px,5vw,48px);line-height:1.04;letter-spacing:-.03em;margin:8px 0}
-    .price-hero span,.price-note{color:rgba(239,249,242,.78);font-size:14px}
+    .hero-stats {
+      position: relative;
+      z-index: 2;
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .stat-card {
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.80);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.34);
+      box-shadow: var(--shadow-sm);
+      color: var(--text);
+    }
+    .stat-card strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+      color: var(--primary-deep);
+    }
+    .stat-card span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.55;
+    }
 
-    .cta-band{
-      display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:40px;border-radius:34px;color:#eef8f1;
+    .section { padding: 96px 0; }
+    .section.alt {
       background:
-        radial-gradient(circle at 0% 0%, rgba(23,155,87,.18), transparent 28%),
-        radial-gradient(circle at 100% 100%, rgba(107,217,163,.16), transparent 30%),
-        linear-gradient(135deg,#07150e 0%,#102b1e 100%);
-      box-shadow:var(--shadow-lg)
+        radial-gradient(circle at 100% 0%, rgba(23,155,87,.05), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,.25), rgba(255,255,255,0));
     }
-    .cta-band h3{font-size:clamp(28px,4vw,42px);line-height:1.14;letter-spacing:-.03em;margin-bottom:10px}
-    .cta-band p{color:rgba(239,249,242,.82);max-width:62ch}
-    .cta-band .cta-actions{display:grid;gap:10px;min-width:min(100%,300px)}
-    .contact-list{display:grid;gap:14px;margin-top:22px}
-    .contact-item{
-      display:flex;align-items:flex-start;gap:14px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)
+    .section-tight { padding-top: 48px; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 28px;
     }
-    .contact-item strong{display:block;color:#fff;font-size:15px;margin-bottom:4px}
-    .contact-item span{color:rgba(239,249,242,.76);font-size:14px}
-
-    .flow-step,.faq-item{
-      background:rgba(255,255,255,.96);border:1px solid rgba(15,23,42,.06);border-radius:22px;padding:22px;box-shadow:var(--shadow)
+    .section-head .copy { max-width: 760px; }
+    .kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--primary-strong);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .10em;
+      text-transform: uppercase;
     }
-    .step-num{width:34px;height:34px;display:grid;place-items:center;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:13px;font-weight:900;margin-bottom:14px}
-    .faq{display:grid;gap:14px}
-    .faq-item summary{cursor:pointer;font-weight:800;list-style:none}
-    .faq-item summary::-webkit-details-marker{display:none}
-    .faq-item p{margin-top:12px;color:var(--text-soft)}
-    .faq-item[open]{border-color:var(--line-strong)}
-
-    .footer{padding:30px 0 96px;color:#66798a;font-size:14px}
-    .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;padding-top:24px;border-top:1px solid rgba(15,23,42,.08)}
-
-    .sticky-cta{
-      position:fixed;right:18px;bottom:18px;z-index:120;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;
-      background:linear-gradient(135deg,var(--primary),var(--primary-strong));color:#fff;font-weight:800;box-shadow:0 18px 38px rgba(15,122,67,.30)
+    .section h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -.04em;
     }
-    .mobile-bar{
-      position:fixed;left:12px;right:12px;bottom:12px;z-index:125;display:none;grid-template-columns:1.2fr .9fr .9fr;gap:10px;padding:10px;border-radius:24px;
-      background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(15,23,42,.08);box-shadow:0 18px 40px rgba(8,20,15,.14)
-    }
-    .mobile-bar a{
-      min-height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800
-    }
-    .mobile-bar a.primary{background:linear-gradient(135deg,var(--primary),var(--primary-strong));color:#fff}
-    .mobile-bar a.secondary{background:#fff;color:var(--text);border:1px solid var(--line)}
-
-    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
-    .reveal.is-visible{opacity:1;transform:translateY(0)}
-
-    @media (max-width:1100px){
-      .hero-grid,.split,.cta-band,.grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid,.why-grid,.qualify-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .hero-grid,.split,.cta-band,.why-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
-      .menu-toggle{display:flex}
-      .sticky-cta{display:none}
-      .mobile-bar{display:grid}
-      .footer{padding-bottom:118px}
+    .section-head p {
+      margin-top: 12px;
+      color: var(--text-soft);
+      font-size: 17px;
+      max-width: 67ch;
     }
 
-    @media (max-width:720px){
-      .hero{padding:66px 0 46px}
-      .section{padding:68px 0}
-      .container{width:min(calc(100% - 24px),var(--container))}
-      .trust-grid,.grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid,.qualify-grid{grid-template-columns:1fr}
-      .nav{min-height:70px}
-      .brand{font-size:14px}
-      .brand-mark{width:38px;height:38px;flex-basis:38px;border-radius:12px}
-      h1{font-size:clamp(30px,10vw,44px)}
-      .lead,.section-head p{font-size:16px}
-      .hero-actions{flex-direction:column}
-      .btn{width:100%}
-      .hero-points span,.tag{width:100%}
-      .hero-card,.card,.flow-step,.faq-item,.cta-band,.price-hero,.qualify-card,.comparison-note{padding:20px}
-      .cta-band .cta-actions{min-width:0}
-      .mobile-bar{grid-template-columns:1fr 1fr 1fr;left:10px;right:10px;bottom:10px;padding:8px}
-      .mobile-bar a{font-size:13px}
-      table{min-width:100%}
-      .comparison{overflow:visible}
-      .comparison table,.comparison thead,.comparison tbody,.comparison th,.comparison td,.comparison tr{display:block}
-      .comparison thead{display:none}
-      .comparison tr{border:1px solid var(--line);border-radius:18px;padding:8px 0;margin-top:12px;background:#fff;box-shadow:var(--shadow)}
-      .comparison td{border:none;padding:8px 16px}
-      .comparison td:first-child{padding-top:16px;font-weight:800;color:var(--text)}
-      .comparison td::before{content:attr(data-label);display:block;font-size:12px;font-weight:800;color:var(--primary-strong);margin-bottom:2px}
-      .comparison td:first-child::before{color:var(--text-faint)}
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .flow-grid,
+    .service-grid,
+    .bento-grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .flow-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .bento-grid {
+      grid-template-columns: 1.2fr .8fr;
+      grid-auto-rows: minmax(180px, auto);
     }
 
-    @media (max-width:540px){
-      .eyebrow{font-size:12px;padding:7px 12px}
-      .section h2,.cta-band h3{font-size:clamp(24px,8vw,32px)}
-      .card h3{font-size:20px}
-      .hero-card,.card,.flow-step,.faq-item,.cta-band,.price-hero,.qualify-card{border-radius:20px;padding:18px}
-      .mobile-bar a{min-height:44px}
+    .card {
+      position: relative;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,.45);
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.22), transparent 42%);
+      pointer-events: none;
+    }
+    .card.dark {
+      background: linear-gradient(180deg, rgba(10,25,18,.94), rgba(18,48,36,.90));
+      border-color: rgba(255,255,255,.08);
+      color: #eff8f3;
+      box-shadow: var(--shadow-lg);
+    }
+    .card h3 {
+      position: relative;
+      z-index: 1;
+      font-size: 22px;
+      line-height: 1.24;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+    .card p,
+    .card li,
+    .card td,
+    .card th {
+      position: relative;
+      z-index: 1;
+      color: var(--text-soft);
+      font-size: 15px;
+      margin: 0;
+    }
+    .card.dark p,
+    .card.dark li { color: rgba(238,247,241,.84); }
+    .icon {
+      position: relative;
+      z-index: 1;
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(23,155,87,.14), rgba(138,224,180,.18));
+      color: var(--primary-deep);
+      font-weight: 900;
+      font-size: 18px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.28);
+    }
+    .card.dark .icon {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(23,155,87,.22), rgba(138,224,180,.16));
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      padding: 0 12px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: rgba(23,155,87,.10);
+      color: var(--primary-deep);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .card.dark .badge {
+      background: rgba(138,224,180,.12);
+      color: #d8ffe8;
+    }
+
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+    .mini-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+    .mini-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 0 6px rgba(23,155,87,.08);
+    }
+
+    .fit-main {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .fit-checks {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .fit-check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .fit-check .dot {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+    .fit-check b {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+    .fit-check span {
+      display: block;
+      color: rgba(238,247,241,.78);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .audience-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(15,31,24,.08);
+      color: #214d37;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .compare-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(290px, .95fr);
+      gap: 22px;
+    }
+    .comparison-wrap {
+      overflow-x: auto;
+      border-radius: 26px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(15,31,24,.08);
+      background: rgba(255,255,255,.88);
+    }
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(15,31,24,.08);
+      text-align: left;
+      vertical-align: top;
+      font-size: 15px;
+    }
+    th {
+      font-size: 13px;
+      color: #294a37;
+      background: #f1faf4;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .note-card {
+      padding: 20px 22px;
+      border-radius: 24px;
+      background: var(--warning);
+      border: 1px solid var(--warning-line);
+      box-shadow: var(--shadow-xs);
+    }
+    .note-card strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      color: #4e4a3b;
+    }
+    .note-card p {
+      color: #665f4e;
+      font-size: 14px;
+    }
+
+    .price-card {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+    .price-hero {
+      padding: 26px;
+      border-radius: 28px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(138,224,180,.18), transparent 28%),
+        linear-gradient(135deg, #0b1d15, #153629 60%, #1a4333 100%);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .price-hero strong {
+      display: block;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -.05em;
+      margin: 8px 0 10px;
+    }
+    .price-hero span,
+    .price-hero p {
+      color: rgba(238,247,241,.76);
+      font-size: 14px;
+    }
+
+    .service-card { min-height: 100%; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .proof-stack { display: grid; gap: 18px; }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .metric-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(15,31,24,.08);
+      box-shadow: var(--shadow-xs);
+    }
+    .metric-card strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: var(--text);
+      letter-spacing: -.02em;
+    }
+    .metric-card span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .flow-step {
+      min-height: 100%;
+      padding: 22px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(15,31,24,.08);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .flow-step::before {
+      content: "";
+      position: absolute;
+      inset: auto -20px -20px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(23,155,87,.10), transparent 70%);
+      pointer-events: none;
+    }
+    .step-num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 22px rgba(23,155,87,.22);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+    .faq-item {
+      padding: 0;
+      border-radius: 26px;
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(15,31,24,.08);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(23,155,87,.08);
+      color: var(--primary-deep);
+      font-size: 22px;
+      font-weight: 500;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .faq-item[open] summary::after {
+      content: "−";
+      background: rgba(23,155,87,.14);
+      transform: rotate(180deg);
+    }
+    .faq-body {
+      padding: 0 24px 22px;
+      color: var(--text-soft);
+      font-size: 15px;
+    }
+    .faq-item[open] { border-color: rgba(23,155,87,.18); }
+
+    .cta-band {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      gap: 22px;
+      padding: 42px;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(23,155,87,.22), transparent 28%),
+        radial-gradient(circle at 100% 100%, rgba(138,224,180,.16), transparent 30%),
+        linear-gradient(135deg, #07150e 0%, #0f281d 55%, #183d2d 100%);
+      color: #eef7f1;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .cta-band::before {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(138,224,180,.20), transparent 68%);
+      pointer-events: none;
+    }
+    .cta-band h3 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -.05em;
+      margin-bottom: 12px;
+    }
+    .cta-band p {
+      color: rgba(238,247,241,.82);
+      max-width: 62ch;
+    }
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .contact-item strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .contact-item span {
+      display: block;
+      color: rgba(238,247,241,.74);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(23,155,87,.26), rgba(138,224,180,.20));
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .cta-actions {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .footer {
+      padding: 34px 0 100px;
+      color: #70847a;
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      border-top: 1px solid rgba(15,31,24,.08);
+    }
+
+    .sticky-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 120;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 20px;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+      box-shadow: 0 18px 38px rgba(15,122,67,.28);
+      transition: opacity .2s ease;
+    }
+    .mobile-bar {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 121;
+      display: none;
+      grid-template-columns: 1.25fr .9fr .9fr;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px) saturate(140%);
+      border: 1px solid rgba(15,31,24,.08);
+      box-shadow: 0 22px 44px rgba(8,20,15,.14);
+      transition: opacity .2s ease;
+    }
+    .mobile-bar a {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .mobile-bar .primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+    }
+    .mobile-bar .secondary {
+      color: var(--text);
+      background: #fff;
+      border: 1px solid rgba(15,31,24,.08);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .72s ease, transform .72s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1180px) {
+      .hero-grid,
+      .compare-shell,
+      .proof-grid,
+      .cta-band,
+      .bento-grid,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .flow-grid,
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .hero-grid,
+      .compare-shell,
+      .proof-grid,
+      .cta-band,
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .nav-links { display: none; }
+      .menu-toggle { display: flex; }
+      .sticky-cta { display: none; }
+      .mobile-bar { display: grid; }
+      .footer { padding-bottom: 120px; }
+    }
+
+    @media (max-width: 760px) {
+      :root { --nav-h: 72px; }
+      .container { width: min(calc(100% - 24px), var(--container)); }
+      .hero { padding: 72px 0 26px; }
+      .section { padding: 74px 0; }
+      .section-tight { padding-top: 34px; }
+      .hero-stats,
+      .quick-grid,
+      .metric-grid,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .flow-grid,
+      .service-grid,
+      .bento-grid { grid-template-columns: 1fr; }
+      .nav { min-height: var(--nav-h); }
+      .brand-mark { width: 40px; height: 40px; flex-basis: 40px; border-radius: 14px; }
+      h1 { font-size: clamp(32px, 10vw, 50px); }
+      .lead,
+      .section-head p { font-size: 16px; }
+      .hero-actions,
+      .cta-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .chip-row .chip,
+      .tag { width: 100%; }
+      .hero-panel,
+      .card,
+      .flow-step,
+      .faq-item,
+      .stat-card,
+      .price-hero,
+      .note-card,
+      .cta-band { padding: 20px; border-radius: 24px; }
+      .faq-item summary { padding: 20px; font-size: 17px; }
+      .faq-body { padding: 0 20px 20px; }
+      .mobile-bar {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 8px;
+      }
+      .mobile-bar a { font-size: 13px; min-height: 44px; }
+      .comparison-wrap { overflow: visible; border: none; box-shadow: none; background: transparent; }
+      .comparison-wrap table,
+      .comparison-wrap thead,
+      .comparison-wrap tbody,
+      .comparison-wrap th,
+      .comparison-wrap td,
+      .comparison-wrap tr { display: block; }
+      .comparison-wrap thead { display: none; }
+      .comparison-wrap tr {
+        margin-top: 12px;
+        border: 1px solid rgba(15,31,24,.08);
+        border-radius: 22px;
+        background: rgba(255,255,255,.88);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+      }
+      .comparison-wrap td {
+        border: none;
+        padding: 8px 18px;
+      }
+      .comparison-wrap td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 2px;
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .comparison-wrap td:first-child {
+        padding-top: 18px;
+        font-weight: 800;
+        color: var(--text);
+      }
+      .comparison-wrap td:first-child::before { color: var(--text-faint); }
+      table { min-width: 100%; }
+    }
+
+    @media (max-width: 540px) {
+      .eyebrow { font-size: 12px; padding: 8px 12px; }
+      .section h2,
+      .cta-band h3 { font-size: clamp(25px, 8vw, 34px); }
+      .card h3 { font-size: 20px; }
+      .brand-copy span { font-size: 14px; }
+      .panel-badge { font-size: 11px; }
+      .quick-card strong { font-size: 18px; }
     }
   </style>
 </head>
@@ -335,19 +1263,20 @@
     <div class="container nav">
       <a href="#top" class="brand" aria-label="ページ上部へ戻る">
         <span class="brand-mark">4U</span>
-        <span class="brand-label">
+        <span class="brand-copy">
           <small>Rope Access Specialist</small>
           <span>ロープアクセス専門施工</span>
         </span>
       </a>
 
-      <div class="nav-links" aria-label="主要セクション">
+      <nav class="nav-links" aria-label="主要セクション">
         <a href="#fit">向いている案件</a>
         <a href="#compare">足場との比較</a>
+        <a href="#service">対応範囲</a>
         <a href="#proof">安全・信頼</a>
         <a href="#faq">よくある質問</a>
         <a href="#contact">お問い合わせ</a>
-      </div>
+      </nav>
 
       <div class="nav-actions">
         <a class="btn btn-primary" href="#contact">相談する</a>
@@ -358,179 +1287,168 @@
     </div>
   </div>
 
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <div class="mobile-menu-inner">
-      <a href="#fit">向いている案件</a>
-      <a href="#compare">足場との比較</a>
-      <a href="#proof">安全・信頼</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#contact" class="mobile-primary">相談する</a>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <nav>
+        <a href="#fit">向いている案件</a>
+        <a href="#compare">足場との比較</a>
+        <a href="#service">対応範囲</a>
+        <a href="#proof">安全・信頼</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact" class="mobile-primary">相談する</a>
+      </nav>
     </div>
   </div>
 
   <header class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <div class="eyebrow">足場を組むほどではない高所作業に</div>
-        <h1>足場を組まずに、<br><span class="grad">必要な高所作業だけを解決。</span></h1>
-        <p class="lead">
-          外壁調査、部分補修、漏水補修、設備工事まで。ロープアクセス専門施工で、
-          発注責任者が抱える「小規模なのに大がかりになる」高所作業を、安全かつ迅速に合理化します。
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">現場の相談をする</a>
-          <a class="btn btn-secondary" href="#compare">足場との違いを見る</a>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">足場を組むほどではない高所作業に</div>
+          <h1>足場を組まずに、<br><span class="grad">必要な高所作業だけを解決。</span></h1>
+          <p class="lead">
+            外壁調査、部分補修、漏水補修、設備工事まで。ロープアクセス専門施工で、
+            発注責任者が抱える「小規模なのに大がかりになる」高所作業を、安全かつ迅速に合理化します。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">現場の相談をする</a>
+            <a class="btn btn-secondary" href="#compare">足場との違いを見る</a>
+            <a class="btn btn-secondary" href="tel:0424480315">電話で相談する</a>
+          </div>
+          <p class="microcopy">全国出張可能 / 電話受付 9:00〜18:00 / 写真があれば概算相談しやすくなります</p>
+          <div class="chip-row" aria-label="特徴">
+            <span class="chip">無足場</span>
+            <span class="chip">必要箇所だけ対応</span>
+            <span class="chip">安全・迅速</span>
+            <span class="chip">自社施工100％</span>
+          </div>
         </div>
-        <p class="microcopy">全国出張可能 / 電話受付 9:00〜18:00 / 写真があれば概算相談しやすくなります</p>
-        <div class="hero-points" aria-label="特徴">
-          <span>無足場</span>
-          <span>必要箇所だけ対応</span>
-          <span>安全・迅速</span>
-          <span>自社施工100％</span>
-        </div>
+
+        <aside class="hero-panel reveal" aria-label="最初に確認したい情報">
+          <div class="hero-panel-header">
+            <div>
+              <span class="panel-badge"><span class="panel-badge-dot"></span>相談前に判断しやすい情報を先に整理</span>
+              <h2>最初の30秒で、相談するべき案件かを見極めやすく。</h2>
+              <p>対象案件かどうか、信頼できるか、相談のハードルが高くないか。その3点が一目で分かるようにまとめています。</p>
+            </div>
+          </div>
+
+          <div class="quick-grid">
+            <div class="quick-card">
+              <span class="quick-label">Track Record</span>
+              <strong>創業15年・墜落災害ゼロ</strong>
+              <span>安全性を最優先する運用体制を継続。</span>
+            </div>
+            <div class="quick-card">
+              <span class="quick-label">In-House</span>
+              <strong>26名体制・自社施工100％</strong>
+              <span>下請け丸投げなし。品質と機動力を自社で管理。</span>
+            </div>
+            <div class="quick-card">
+              <span class="quick-label">Quality</span>
+              <strong>ISO9001・JIRAA</strong>
+              <span>品質とロープアクセス技術の両面で管理。</span>
+            </div>
+            <div class="quick-card">
+              <span class="quick-label">Coverage</span>
+              <strong>年500件超の現場対応</strong>
+              <span>外壁、漏水、設備、看板、プラントまで幅広く対応。</span>
+            </div>
+          </div>
+
+          <div class="contact-stack">
+            <a class="btn btn-light" href="https://4-u.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせフォームへ</a>
+            <a class="btn btn-secondary" href="https://page.line.me/603lexbt" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+          </div>
+          <p class="contact-note">相談時にあるとスムーズな情報：現場の所在地 / 建物用途 / 対象箇所 / 写真 / 緊急度 / 希望時期</p>
+        </aside>
       </div>
 
-      <aside class="hero-card reveal" aria-label="最初に伝える判断材料">
-        <span class="status">問い合わせ前に判断しやすい情報を先に整理</span>
-        <h2>まず確認したいことを、右側に集約しました。</h2>
-        <p>問い合わせ獲得を優先するため、最初に「対象案件かどうか」「信頼できるか」「相談しやすいか」が分かる構成にしています。</p>
-
-        <div class="trust-grid" aria-label="信頼指標">
-          <div class="trust-item">
-            <strong>創業15年・墜落災害ゼロ</strong>
-            <span>安全性を最優先する運用体制を継続。現場での安心感を数値で支えます。</span>
-          </div>
-          <div class="trust-item">
-            <strong>26名体制・自社施工100％</strong>
-            <span>下請け丸投げなし。品質・機動力・緊急対応を自社で完結します。</span>
-          </div>
-          <div class="trust-item">
-            <strong>ISO9001・JIRAA</strong>
-            <span>品質マネジメントとロープアクセス技術の両面から、信頼の根拠を明確化。</span>
-          </div>
-          <div class="trust-item">
-            <strong>年500件超の現場対応</strong>
-            <span>外壁、漏水、設備、看板、プラントなど多様な高所作業に対応しています。</span>
-          </div>
-        </div>
-
-        <div class="hero-checklist" aria-label="相談前のハードルを下げる情報">
-          <div class="hero-check">
-            <div class="check-dot">1</div>
-            <div><b>相談だけでも可能</b><span>対応可否の整理だけでも進められます。</span></div>
-          </div>
-          <div class="hero-check">
-            <div class="check-dot">2</div>
-            <div><b>写真があれば概算相談しやすい</b><span>所在地・対象箇所・緊急度が分かると判断が速くなります。</span></div>
-          </div>
-          <div class="hero-check">
-            <div class="check-dot">3</div>
-            <div><b>足場が有利な場合も案内</b><span>ロープアクセスが不向きなケースも含めて比較しながら案内します。</span></div>
-          </div>
-        </div>
-
-        <div class="hero-contact-actions">
-          <a class="btn btn-light" href="#contact">問い合わせ方法を見る</a>
-          <a class="btn btn-secondary" href="tel:0424480315">電話で相談する</a>
-        </div>
-        <p class="hero-mini">相談時にあるとスムーズな情報：現場の所在地 / 建物用途 / 対象箇所 / 写真 / 緊急度 / 希望時期</p>
-      </aside>
+      <div class="hero-stats reveal" aria-label="主要指標">
+        <article class="stat-card">
+          <strong>1DAY</strong>
+          <span>小規模高所案件の工事目安を提示し、相談のハードルを下げます。</span>
+        </article>
+        <article class="stat-card">
+          <strong>10万円〜</strong>
+          <span>1日2名体制の目安。詳細は現場条件と数量で変動します。</span>
+        </article>
+        <article class="stat-card">
+          <strong>2名体制</strong>
+          <span>レスキューを前提にした安全設計で現場を運用します。</span>
+        </article>
+        <article class="stat-card">
+          <strong>全国対応</strong>
+          <span>狭小地やアクセス困難箇所を含め、多様な高所案件に対応可能です。</span>
+        </article>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="section reveal" id="fit">
+    <section class="section section-tight" id="fit">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">Fit First</span>
             <h2>最初に「向いている案件か」を判断しやすく。</h2>
             <p>
-              問い合わせ獲得では、詳しい説明より先に「うちの案件は相談対象か」を早く判断できることが重要です。
+              問い合わせを増やすうえで重要なのは、詳しい説明より先に「この案件は相談対象か」を短時間で判断できることです。
               そのため、適合度の高い案件を先に明示しています。
             </p>
           </div>
         </div>
 
-        <div class="qualify-grid">
-          <article class="qualify-card">
-            <strong>部分補修</strong>
-            <p>全面改修ではなく、必要箇所だけを早く直したい案件。</p>
-          </article>
-          <article class="qualify-card">
-            <strong>足場が大がかり</strong>
-            <p>仮設費が重く、小規模工事に対して合理性が低い案件。</p>
-          </article>
-          <article class="qualify-card">
-            <strong>狭小地・営業中施設</strong>
-            <p>周辺調整が多く、足場設置の影響を抑えたい案件。</p>
-          </article>
-          <article class="qualify-card">
-            <strong>緊急対応</strong>
-            <p>剥落・漏水・設備不具合など、早期の確認や応急対応が必要な案件。</p>
-          </article>
-        </div>
-
-        <div class="tag-row">
-          <span class="tag">ビル管理会社</span>
-          <span class="tag">建設会社・ゼネコン</span>
-          <span class="tag">外壁補修会社</span>
-          <span class="tag">設備工事会社</span>
-          <span class="tag">管理組合</span>
-          <span class="tag">物件オーナー</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-sm alt reveal" id="why">
-      <div class="container">
-        <div class="why-grid">
-          <article class="card dark">
-            <span class="badge">Reason to Act</span>
-            <h2 style="margin:0 0 16px; font-size:clamp(28px,4vw,44px);">部分的な高所作業なのに、従来工法だと大がかりすぎる。</h2>
-            <p>
-              一部だけ調査したい。必要箇所だけ直したい。そんな現場でも、足場を前提にするとコスト・工期・周辺影響が大きくなり、発注判断そのものが重くなります。
-            </p>
-            <ul class="mini-list">
-              <li>部分作業でも足場の設置・解体費が発生しやすい</li>
-              <li>緊急性が高い補修ほどスピードを出しにくい</li>
-              <li>狭小地、通行人、住人、テナントへの調整が増える</li>
-              <li>小規模案件なのに社内説明の負荷が高くなる</li>
-            </ul>
+        <div class="bento-grid reveal">
+          <article class="card dark fit-main">
+            <div>
+              <span class="badge">Best Fit</span>
+              <h3>こんな現場は、ロープアクセスが有力候補です。</h3>
+              <p>全面改修ではなく、必要箇所だけを早く合理的に進めたい案件。足場が大がかりになるほど、比較検討する価値があります。</p>
+            </div>
+            <div class="fit-checks">
+              <div class="fit-check">
+                <div class="dot">1</div>
+                <div><b>部分補修・部分調査</b><span>全面改修ではなく、必要箇所だけ早く直したい案件。</span></div>
+              </div>
+              <div class="fit-check">
+                <div class="dot">2</div>
+                <div><b>足場が大がかり</b><span>仮設費が重く、小規模工事に対して合理性が低い案件。</span></div>
+              </div>
+              <div class="fit-check">
+                <div class="dot">3</div>
+                <div><b>狭小地・営業中施設</b><span>周辺調整が多く、足場設置の影響を抑えたい案件。</span></div>
+              </div>
+              <div class="fit-check">
+                <div class="dot">4</div>
+                <div><b>緊急対応</b><span>剥落・漏水・設備不具合など、早期確認や応急対応が必要な案件。</span></div>
+              </div>
+            </div>
           </article>
 
-          <div class="stack">
-            <article class="card">
-              <span class="badge">Benefit</span>
-              <h3>発注責任者にとっての価値</h3>
-              <p>
-                「小規模なのに大がかりになる」高所作業を、必要な範囲だけ、無駄なく、安心して進められること。
-                安全性への不安を抑えながら、現場を早く前に進められます。
-              </p>
-            </article>
-            <article class="card">
-              <span class="badge">Use Cases</span>
-              <h3>相談されやすい案件例</h3>
-              <p>
-                外壁調査、打診調査、部分補修、シーリング、ヒビ割れ補修、漏水調査・補修、看板・照明・配管など、
-                足場を組むほどではない高所作業に向いています。
-              </p>
-            </article>
-            <article class="card">
-              <span class="badge">Fast Path</span>
-              <h3>相談時に必要な情報は多くありません</h3>
-              <p>
-                写真、対象箇所、所在地、希望時期が分かれば、初回相談の入口として十分です。情報が足りない場合は、現地下見を含めて整理できます。
-              </p>
-            </article>
-          </div>
+          <article class="card audience-card">
+            <div>
+              <span class="badge">Audience</span>
+              <h3>相談が多い立場</h3>
+              <p>「うちも該当するか」をすぐ判断しやすいよう、相談されやすい立場を明確化しています。</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">ビル管理会社</span>
+              <span class="tag">建設会社・ゼネコン</span>
+              <span class="tag">外壁補修会社</span>
+              <span class="tag">設備工事会社</span>
+              <span class="tag">管理組合</span>
+              <span class="tag">物件オーナー</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="compare">
+    <section class="section alt" id="compare">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">Compare Early</span>
             <h2>問い合わせを後押しするのは、比較材料の明確さです。</h2>
@@ -541,57 +1459,49 @@
           </div>
         </div>
 
-        <div class="split">
+        <div class="compare-shell reveal">
           <div>
-            <article class="card">
-              <span class="badge">Comparison</span>
-              <h3>足場設置とロープアクセスの考え方</h3>
-              <div class="comparison">
-                <table aria-label="足場設置とロープアクセスの比較表">
-                  <thead>
-                    <tr>
-                      <th>比較項目</th>
-                      <th>足場設置</th>
-                      <th>ロープアクセス</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td data-label="比較項目">小規模・ピンポイント工事</td>
-                      <td data-label="足場設置">仮設費が重くなりやすい</td>
-                      <td data-label="ロープアクセス">必要箇所だけ施工しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">工期</td>
-                      <td data-label="足場設置">設置・撤去を含め長くなりやすい</td>
-                      <td data-label="ロープアクセス">短工期で完了しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">狭小地・特殊形状</td>
-                      <td data-label="足場設置">制約を受けやすい</td>
-                      <td data-label="ロープアクセス">対応しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">全面改修</td>
-                      <td data-label="足場設置">足場のほうが有利な場合もある</td>
-                      <td data-label="ロープアクセス">部分改修で特に強みを発揮</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">営業中施設への影響</td>
-                      <td data-label="足場設置">周辺調整が増えやすい</td>
-                      <td data-label="ロープアクセス">影響を抑えやすい</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </article>
-
-            <div class="comparison-note">
+            <div class="comparison-wrap">
+              <table aria-label="足場設置とロープアクセスの比較表">
+                <thead>
+                  <tr>
+                    <th>比較項目</th>
+                    <th>足場設置</th>
+                    <th>ロープアクセス</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="比較項目">小規模・ピンポイント工事</td>
+                    <td data-label="足場設置">仮設費が重くなりやすい</td>
+                    <td data-label="ロープアクセス">必要箇所だけ施工しやすい</td>
+                  </tr>
+                  <tr>
+                    <td data-label="比較項目">工期</td>
+                    <td data-label="足場設置">設置・撤去を含め長くなりやすい</td>
+                    <td data-label="ロープアクセス">短工期で完了しやすい</td>
+                  </tr>
+                  <tr>
+                    <td data-label="比較項目">狭小地・特殊形状</td>
+                    <td data-label="足場設置">制約を受けやすい</td>
+                    <td data-label="ロープアクセス">対応しやすい</td>
+                  </tr>
+                  <tr>
+                    <td data-label="比較項目">全面改修</td>
+                    <td data-label="足場設置">足場のほうが有利な場合もある</td>
+                    <td data-label="ロープアクセス">部分改修で特に強みを発揮</td>
+                  </tr>
+                  <tr>
+                    <td data-label="比較項目">営業中施設への影響</td>
+                    <td data-label="足場設置">周辺調整が増えやすい</td>
+                    <td data-label="ロープアクセス">影響を抑えやすい</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note-card" style="margin-top:14px;">
               <strong>初期段階で比較しておくことが重要です</strong>
-              <p>
-                施工方法の選択は、その後の段取りやコスト感に大きく影響します。部分補修や小規模な高所作業では、
-                足場を前提に進める前にロープアクセスの適性を確認しておくと、より合理的に判断しやすくなります。
-              </p>
+              <p>施工方法の選択は、その後の段取りやコスト感に大きく影響します。部分補修や小規模な高所作業では、足場を前提に進める前にロープアクセスの適性を確認しておくと、より合理的に判断しやすくなります。</p>
             </div>
           </div>
 
@@ -599,10 +1509,11 @@
             <div class="price-hero">
               <span>小さな高所案件の相談ハードルを下げる</span>
               <strong>1DAY施工<br>目安 10万円</strong>
-              <span>1日2名体制の工事目安。材料費・警備員・諸経費は別途、内容により変動します。</span>
+              <p>1日2名体制の工事目安。材料費・警備員・諸経費は別途、内容により変動します。</p>
             </div>
             <article class="card">
-              <h3>こんな工事に</h3>
+              <span class="badge">Good For</span>
+              <h3>この費用感が活きる工事</h3>
               <ul class="mini-list">
                 <li>塗装・防水</li>
                 <li>雨漏り調査・補修</li>
@@ -611,33 +1522,27 @@
                 <li>配管などの軽微な設備工事</li>
               </ul>
             </article>
-            <article class="card">
-              <h3>問い合わせ前に伝わること</h3>
-              <ul class="mini-list">
-                <li>費用感の下限イメージが持てる</li>
-                <li>部分工事に向く理由が比較で分かる</li>
-                <li>現場条件が合えば早く相談判断できる</li>
-              </ul>
-            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-sm alt reveal" id="service">
+    <section class="section" id="service">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">Service Scope</span>
             <h2>対応できる工事を具体的に見せ、問い合わせ迷いを減らす。</h2>
             <p>
-              「うちの案件も頼めるのか」をここで明確にします。問い合わせ直前で迷わせないため、相談されやすい工事領域を先に絞って見せています。
+              「うちの案件も頼めるのか」をここで明確にします。問い合わせ直前で迷わせないため、
+              相談されやすい工事領域を具体的に見せています。
             </p>
           </div>
         </div>
 
-        <div class="service-grid">
-          <article class="card">
+        <div class="service-grid reveal">
+          <article class="card service-card">
+            <div class="icon">補</div>
             <h3>補修・修繕工事</h3>
             <ul class="mini-list">
               <li>塗装工事</li>
@@ -647,7 +1552,8 @@
               <li>漏水補修 / 下地補修</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card service-card">
+            <div class="icon">調</div>
             <h3>調査・点検</h3>
             <ul class="mini-list">
               <li>打診調査</li>
@@ -656,7 +1562,8 @@
               <li>正確な近接目視・触診調査</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card service-card">
+            <div class="icon">設</div>
             <h3>設備・その他</h3>
             <ul class="mini-list">
               <li>配管・ダクト</li>
@@ -669,9 +1576,9 @@
       </div>
     </section>
 
-    <section class="section reveal" id="proof">
+    <section class="section alt" id="proof">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">Proof &amp; Safety</span>
             <h2>問い合わせ直前の主要な障壁は、安全性と発注責任です。</h2>
@@ -681,7 +1588,7 @@
           </div>
         </div>
 
-        <div class="grid-2">
+        <div class="proof-grid reveal">
           <article class="card dark">
             <span class="badge">PRASS+</span>
             <h3>独自の3禁ルールを徹底</h3>
@@ -693,44 +1600,38 @@
             <p style="margin-top:16px;">最低2名体制、レスキュー体制、第三者災害防止対策まで含めて現場を運用します。</p>
           </article>
 
-          <article class="card dark">
-            <span class="badge">JIRAA / ISO9001</span>
-            <h3>技術と品質を両輪で管理</h3>
-            <p>
-              JIRAA教育プログラムを導入し、技術・リスクアセスメント・安全管理・レスキュー対応を体系化。
-              さらに品質マネジメントシステムの国際規格であるISO9001認証を取得しています。
-            </p>
-          </article>
-        </div>
-
-        <div class="grid-4" style="margin-top:18px;">
-          <article class="card">
-            <div class="icon">01</div>
-            <h3>自社施工100％</h3>
-            <p>下請け丸投げなし。品質と安全を自社でコントロールします。</p>
-          </article>
-          <article class="card">
-            <div class="icon">02</div>
-            <h3>高い機動力</h3>
-            <p>人数体制があり、緊急案件や複数現場にも素早く対応できます。</p>
-          </article>
-          <article class="card">
-            <div class="icon">03</div>
-            <h3>教育まで担える実力</h3>
-            <p>毎月の講習会や企業研修を行えるレベルの知見で、安全文化も発信しています。</p>
-          </article>
-          <article class="card">
-            <div class="icon">04</div>
-            <h3>資機材への深い知見</h3>
-            <p>安全対策器材の開発と販売まで行い、現場道具への理解も深い体制です。</p>
-          </article>
+          <div class="proof-stack">
+            <article class="card dark">
+              <span class="badge">JIRAA / ISO9001</span>
+              <h3>技術と品質を両輪で管理</h3>
+              <p>JIRAA教育プログラムを導入し、技術・リスクアセスメント・安全管理・レスキュー対応を体系化。さらにISO9001認証を取得しています。</p>
+            </article>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <strong>自社施工100％</strong>
+                <span>下請け丸投げなし。品質と安全を自社でコントロールします。</span>
+              </article>
+              <article class="metric-card">
+                <strong>高い機動力</strong>
+                <span>緊急案件や複数現場にも素早く対応できます。</span>
+              </article>
+              <article class="metric-card">
+                <strong>教育まで担える実力</strong>
+                <span>講習会や企業研修を行えるレベルの知見があります。</span>
+              </article>
+              <article class="metric-card">
+                <strong>資機材への深い知見</strong>
+                <span>安全対策器材の開発・販売まで行う体制です。</span>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-sm alt reveal" id="flow">
+    <section class="section" id="flow">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">Low Friction Flow</span>
             <h2>問い合わせのハードルを下げるため、流れは4ステップだけ。</h2>
@@ -740,7 +1641,7 @@
           </div>
         </div>
 
-        <div class="flow-grid">
+        <div class="flow-grid reveal">
           <article class="flow-step">
             <div class="step-num">01</div>
             <h3>お問い合わせ</h3>
@@ -765,9 +1666,9 @@
       </div>
     </section>
 
-    <section class="section reveal" id="faq">
+    <section class="section alt" id="faq">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="copy">
             <span class="kicker">FAQ</span>
             <h2>最後の離脱要因を、問い合わせ直前で潰す。</h2>
@@ -778,42 +1679,42 @@
           </div>
         </div>
 
-        <div class="faq">
+        <div class="faq reveal">
           <details class="faq-item" open>
             <summary>ロープアクセスは本当に安全ですか？</summary>
-            <p>
+            <div class="faq-body">
               現場条件に応じた安全計画、最低2名体制、レスキューを想定した運用、第三者災害防止まで含めて計画します。
               工法そのものではなく、体制と運用まで含めて安全性を担保する考え方です。
-            </p>
+            </div>
           </details>
           <details class="faq-item" open>
             <summary>まず相談だけでも可能ですか？</summary>
-            <p>
+            <div class="faq-body">
               可能です。写真や現場概要があれば、ロープアクセスで対応しやすいかどうかの判断材料を整理しやすくなります。
               必要に応じて、足場を含む他の方法と比較しながら検討いただけます。
-            </p>
+            </div>
           </details>
           <details class="faq-item">
             <summary>どんな現場でもロープアクセスが向いていますか？</summary>
-            <p>
+            <div class="faq-body">
               すべての現場でロープアクセスが最適とは限りません。部分補修、狭小地、アクセス困難箇所、営業中施設、緊急対応など、
               足場が大がかりになりやすい現場で特に強みを発揮します。
-            </p>
+            </div>
           </details>
           <details class="faq-item">
             <summary>概算の相談はできますか？</summary>
-            <p>
+            <div class="faq-body">
               写真、対象箇所、所在地、希望時期が分かれば、概算の方向性を整理しやすくなります。
               ただし正式見積もりは現場条件や数量確認後となります。
-            </p>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="section reveal" id="contact">
+    <section class="section" id="contact">
       <div class="container">
-        <div class="cta-band">
+        <div class="cta-band reveal">
           <div>
             <h3>足場を組むほどではない高所作業、まずはご相談ください。</h3>
             <p>
@@ -822,21 +1723,21 @@
             </p>
             <div class="contact-list">
               <div class="contact-item">
-                <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px; font-size:16px;">✓</div>
+                <div class="contact-icon">✓</div>
                 <div>
                   <strong>相談時にあるとスムーズな情報</strong>
                   <span>現場の所在地 / 建物用途 / 対象箇所 / 写真 / 緊急度 / 希望時期</span>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px; font-size:16px;">☎</div>
+                <div class="contact-icon">☎</div>
                 <div>
                   <strong>電話受付</strong>
                   <span>042-448-0315（9:00〜18:00）</span>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px; font-size:16px;">?</div>
+                <div class="contact-icon">?</div>
                 <div>
                   <strong>まずは相談だけでも可能</strong>
                   <span>写真共有と現場概要だけでも、対応可否の検討材料を整理しやすくなります。</span>
@@ -846,9 +1747,9 @@
           </div>
 
           <div class="cta-actions">
-            <a class="btn btn-primary" href="https://4-u.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
+            <a class="btn btn-light" href="https://4-u.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
             <a class="btn btn-secondary" href="tel:0424480315">電話で相談する</a>
-            <a class="btn btn-light" href="https://page.line.me/603lexbt" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+            <a class="btn btn-secondary" href="https://page.line.me/603lexbt" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
             <a class="btn btn-ghost" href="#top">ページ上部へ戻る</a>
           </div>
         </div>
@@ -871,49 +1772,57 @@
   </div>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
     const toggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBackdrop = document.getElementById('mobileBackdrop');
     const body = document.body;
 
     const closeMenu = () => {
-      if (!toggle || !mobileMenu) return;
+      if (!toggle || !mobileMenu || !mobileBackdrop) return;
       toggle.setAttribute('aria-expanded', 'false');
-      mobileMenu.hidden = true;
+      toggle.setAttribute('aria-label', 'メニューを開く');
+      mobileMenu.setAttribute('aria-hidden', 'true');
       mobileMenu.classList.remove('is-open');
+      mobileBackdrop.classList.remove('is-open');
       body.classList.remove('menu-open');
     };
 
     const openMenu = () => {
-      if (!toggle || !mobileMenu) return;
+      if (!toggle || !mobileMenu || !mobileBackdrop) return;
       toggle.setAttribute('aria-expanded', 'true');
-      mobileMenu.hidden = false;
+      toggle.setAttribute('aria-label', 'メニューを閉じる');
+      mobileMenu.setAttribute('aria-hidden', 'false');
       mobileMenu.classList.add('is-open');
+      mobileBackdrop.classList.add('is-open');
       body.classList.add('menu-open');
     };
 
-    if (toggle && mobileMenu) {
+    if (toggle && mobileMenu && mobileBackdrop) {
       toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
         expanded ? closeMenu() : openMenu();
       });
 
-      mobileMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', closeMenu);
-      });
+      mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+      mobileBackdrop.addEventListener('click', closeMenu);
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth > 1100) closeMenu();
+        if (window.innerWidth > 1180) closeMenu();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
       });
     }
 
@@ -922,16 +1831,20 @@
     const contact = document.getElementById('contact');
 
     if (contact) {
-      const io = new IntersectionObserver((entries) => {
+      const ctaObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           const hidden = entry.isIntersecting;
-          if (stickyCta) stickyCta.style.opacity = hidden ? '0' : '1';
-          if (stickyCta) stickyCta.style.pointerEvents = hidden ? 'none' : 'auto';
-          if (mobileBar) mobileBar.style.opacity = hidden ? '0' : '1';
-          if (mobileBar) mobileBar.style.pointerEvents = hidden ? 'none' : 'auto';
+          if (stickyCta) {
+            stickyCta.style.opacity = hidden ? '0' : '1';
+            stickyCta.style.pointerEvents = hidden ? 'none' : 'auto';
+          }
+          if (mobileBar) {
+            mobileBar.style.opacity = hidden ? '0' : '1';
+            mobileBar.style.pointerEvents = hidden ? 'none' : 'auto';
+          }
         });
       }, { threshold: 0.18 });
-      io.observe(contact);
+      ctaObserver.observe(contact);
     }
   </script>
 </body>
