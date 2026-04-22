@@ -8,28 +8,29 @@
   <meta name="theme-color" content="#0b1c14" />
   <style>
     :root{
-      --bg:#f4faf6;
-      --bg-soft:#edf6f0;
+      --bg:#f5fbf7;
+      --bg-soft:#eef7f1;
       --surface:#ffffff;
-      --surface-2:#f8fcf9;
-      --text:#0f1d17;
-      --text-soft:#466055;
-      --text-faint:#678074;
-      --line:#d9e8de;
-      --line-strong:#c7ddcf;
+      --surface-2:#f9fcfa;
+      --hero:#07150f;
+      --hero-2:#0f261b;
+      --hero-3:#163b2c;
+      --text:#102019;
+      --text-soft:#4a6257;
+      --text-faint:#6f867c;
+      --line:#d9e7de;
+      --line-strong:#c5dccd;
       --primary:#179b57;
       --primary-strong:#0f7a43;
-      --primary-deep:#0a5c31;
-      --accent:#6bd9a3;
-      --accent-soft:rgba(107,217,163,0.14);
-      --hero:#08140f;
-      --hero-2:#0c2218;
-      --hero-3:#13372a;
-      --hero-text:#eff9f2;
-      --shadow:0 18px 40px rgba(8,20,15,0.08);
-      --shadow-lg:0 28px 80px rgba(4,17,11,0.22);
-      --radius-xl:32px;
-      --radius-lg:24px;
+      --primary-deep:#0a5d31;
+      --accent:#72e0aa;
+      --accent-soft:rgba(114,224,170,.16);
+      --warn:#fff8e8;
+      --warn-line:#f3ddb2;
+      --shadow:0 18px 40px rgba(8,20,15,.08);
+      --shadow-lg:0 30px 90px rgba(4,17,11,.22);
+      --radius-xl:34px;
+      --radius-lg:26px;
       --radius-md:18px;
       --radius-sm:14px;
       --container:1180px;
@@ -42,909 +43,288 @@
       margin:0;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(23,155,87,0.05), transparent 28%),
-        linear-gradient(180deg, #f8fcf9 0%, #eff6f1 100%);
+        radial-gradient(circle at top left, rgba(23,155,87,.05), transparent 28%),
+        linear-gradient(180deg,#f8fcf9 0%,#eff6f1 100%);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
       line-height:1.7;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
-
     body.menu-open{overflow:hidden}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     button{font:inherit}
     :focus-visible{
-      outline:3px solid rgba(23,155,87,0.35);
+      outline:3px solid rgba(23,155,87,.35);
       outline-offset:3px;
       border-radius:12px;
     }
 
-    .container{
-      width:min(calc(100% - 32px), var(--container));
-      margin:0 auto;
-    }
-
-    .skip-link{
-      position:absolute;
-      left:-9999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
+    .container{width:min(calc(100% - 32px),var(--container));margin:0 auto}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip-link:focus{
-      left:16px;
-      top:16px;
-      width:auto;
-      height:auto;
-      padding:10px 14px;
-      background:#fff;
-      color:var(--text);
-      z-index:1000;
-      border-radius:999px;
-      box-shadow:var(--shadow);
+      left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:var(--text);z-index:1000;border-radius:999px;box-shadow:var(--shadow)
     }
 
     .nav-wrap{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(8,20,15,0.76);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      position:sticky;top:0;z-index:100;background:rgba(7,21,15,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)
     }
     .nav{
-      min-height:var(--nav-h);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      color:var(--hero-text);
+      min-height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:18px;color:#eef8f1
     }
-
-    .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      min-width:0;
-      font-weight:900;
-      letter-spacing:.02em;
-    }
+    .brand{display:inline-flex;align-items:center;gap:12px;min-width:0;font-weight:900;letter-spacing:.02em}
     .brand-mark{
-      width:44px;
-      height:44px;
-      flex:0 0 44px;
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-      box-shadow:0 14px 30px rgba(23,155,87,0.28);
-      color:#fff;
-      font-size:18px;
-      font-weight:900;
+      width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));
+      box-shadow:0 14px 30px rgba(23,155,87,.28);color:#fff;font-size:18px;font-weight:900
     }
-    .brand-label{
-      display:grid;
-      line-height:1.2;
-    }
-    .brand-label small{
-      color:rgba(239,249,242,0.68);
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
+    .brand-label{display:grid;line-height:1.18}
+    .brand-label small{font-size:11px;font-weight:700;letter-spacing:.08em;color:rgba(239,249,242,.68);text-transform:uppercase}
 
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      font-size:14px;
-      color:rgba(239,249,242,0.84);
-      font-weight:700;
-    }
-    .nav-links a{
-      position:relative;
-      padding:6px 0;
-    }
+    .nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:rgba(239,249,242,.84)}
+    .nav-links a{position:relative;padding:6px 0}
     .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:-2px;
-      height:2px;
-      border-radius:999px;
-      transform:scaleX(0);
-      transform-origin:left;
-      background:linear-gradient(135deg,var(--accent),#fff);
-      transition:transform .22s ease;
+      content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:999px;transform:scaleX(0);transform-origin:left;
+      background:linear-gradient(135deg,var(--accent),#fff);transition:transform .22s ease
     }
     .nav-links a:hover::after{transform:scaleX(1)}
-
-    .nav-actions{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    .nav-actions{display:flex;align-items:center;gap:12px}
 
     .menu-toggle{
-      display:none;
-      width:46px;
-      height:46px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.06);
-      color:#fff;
-      border-radius:14px;
-      cursor:pointer;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      gap:5px;
-      transition:background .2s ease, transform .2s ease;
+      display:none;width:46px;height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;border-radius:14px;cursor:pointer;
+      align-items:center;justify-content:center;flex-direction:column;gap:5px;transition:background .2s ease, transform .2s ease
     }
-    .menu-toggle:hover{background:rgba(255,255,255,0.12)}
-    .menu-toggle span{
-      width:18px;
-      height:2px;
-      border-radius:999px;
-      background:#fff;
-      display:block;
-      transition:transform .22s ease, opacity .22s ease;
-    }
+    .menu-toggle span{width:18px;height:2px;border-radius:999px;background:#fff;display:block;transition:transform .22s ease, opacity .22s ease}
+    .menu-toggle:hover{background:rgba(255,255,255,.12)}
     .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
     .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
     .mobile-menu{
-      display:none;
-      position:fixed;
-      inset:var(--nav-h) 0 auto 0;
-      background:rgba(8,20,15,0.96);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-      box-shadow:var(--shadow-lg);
-      padding:10px 16px 18px;
-    }
-    .mobile-menu-inner{
-      width:min(calc(100% - 32px), var(--container));
-      margin:0 auto;
-      display:grid;
-      gap:10px;
-    }
-    .mobile-menu a{
-      color:#fff;
-      padding:14px 16px;
-      border-radius:16px;
-      font-weight:800;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.07);
-    }
-    .mobile-menu a.mobile-primary{
-      background:linear-gradient(135deg,var(--primary),var(--primary-strong));
-      border:none;
+      display:none;position:fixed;inset:var(--nav-h) 0 auto 0;background:rgba(7,21,15,.97);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow-lg);padding:10px 16px 18px
     }
     .mobile-menu.is-open{display:block}
+    .mobile-menu-inner{width:min(calc(100% - 32px),var(--container));margin:0 auto;display:grid;gap:10px}
+    .mobile-menu a{color:#fff;padding:14px 16px;border-radius:16px;font-weight:800;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)}
+    .mobile-menu a.mobile-primary{background:linear-gradient(135deg,var(--primary),var(--primary-strong));border:none}
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:52px;
-      padding:0 22px;
-      border:none;
-      cursor:pointer;
-      border-radius:999px;
-      font-size:15px;
-      font-weight:800;
-      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
-      white-space:nowrap;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border:none;cursor:pointer;border-radius:999px;font-size:15px;font-weight:800;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;white-space:nowrap
     }
     .btn:hover{transform:translateY(-1px)}
-    .btn-primary{
-      color:#fff;
-      background:linear-gradient(135deg,var(--primary),var(--primary-strong));
-      box-shadow:0 18px 34px rgba(15,122,67,0.22);
-    }
-    .btn-secondary{
-      color:#fff;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-    }
-    .btn-light{
-      color:var(--primary-deep);
-      background:#e9f8ee;
-      border:1px solid #d2ecd9;
-    }
-    .btn-ghost{
-      color:var(--text);
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
+    .btn-primary{color:#fff;background:linear-gradient(135deg,var(--primary),var(--primary-strong));box-shadow:0 18px 34px rgba(15,122,67,.22)}
+    .btn-secondary{color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+    .btn-light{color:var(--primary-deep);background:#e9f8ee;border:1px solid #d2ecd9}
+    .btn-ghost{color:var(--text);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
 
     .hero{
-      position:relative;
-      overflow:hidden;
-      color:var(--hero-text);
+      position:relative;overflow:hidden;color:#eef8f1;
       background:
-        radial-gradient(circle at 10% 18%, rgba(23,155,87,0.22), transparent 34%),
-        radial-gradient(circle at 88% 12%, rgba(107,217,163,0.18), transparent 30%),
-        linear-gradient(135deg, var(--hero) 0%, var(--hero-2) 50%, var(--hero-3) 100%);
-      padding:84px 0 64px;
+        radial-gradient(circle at 8% 18%, rgba(23,155,87,.22), transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(107,217,163,.18), transparent 30%),
+        linear-gradient(135deg,var(--hero) 0%,var(--hero-2) 48%,var(--hero-3) 100%);
+      padding:88px 0 66px
     }
-    .hero::before,
-    .hero::after{
-      content:"";
-      position:absolute;
-      border-radius:999px;
-      filter:blur(18px);
-      pointer-events:none;
-      opacity:.56;
-    }
-    .hero::before{
-      width:260px;height:260px;
-      right:8%;top:10%;
-      background:rgba(23,155,87,0.16);
-    }
-    .hero::after{
-      width:180px;height:180px;
-      left:9%;bottom:10%;
-      background:rgba(107,217,163,0.14);
-    }
-
+    .hero::before,.hero::after{content:"";position:absolute;border-radius:999px;filter:blur(18px);pointer-events:none;opacity:.58}
+    .hero::before{width:260px;height:260px;right:8%;top:10%;background:rgba(23,155,87,.16)}
+    .hero::after{width:180px;height:180px;left:8%;bottom:8%;background:rgba(107,217,163,.14)}
     .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.04fr) minmax(340px,0.96fr);
-      gap:34px;
-      align-items:center;
-      position:relative;
-      z-index:1;
+      position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);gap:32px;align-items:start
     }
-
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      color:#daf4e4;
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:.03em;
-      margin-bottom:18px;
+      display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+      color:#daf4e4;font-size:13px;font-weight:800;letter-spacing:.03em;margin-bottom:18px
     }
-
-    h1{
-      margin:0 0 18px;
-      font-size:clamp(36px,5vw,66px);
-      line-height:1.05;
-      letter-spacing:-.045em;
-      font-weight:900;
-    }
+    h1,h2,h3,p{margin:0}
+    h1{font-size:clamp(36px,5vw,66px);line-height:1.05;letter-spacing:-.04em;font-weight:900;margin-bottom:16px}
     .grad{
-      background:linear-gradient(135deg,#fff 0%, #d6f8e3 48%, #82e2b1 100%);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-      color:transparent;
+      background:linear-gradient(135deg,#fff 0%,#d6f8e3 48%,#82e2b1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent
     }
-    .lead{
-      margin:0 0 22px;
-      max-width:58ch;
-      color:rgba(239,249,242,0.84);
-      font-size:18px;
-    }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:14px;
-    }
-    .microcopy{
-      color:rgba(239,249,242,0.74);
-      font-size:13px;
-      margin:0 0 22px;
-    }
-    .hero-points{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+    .lead{font-size:18px;color:rgba(239,249,242,.84);max-width:62ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0 14px}
+    .microcopy{font-size:13px;color:rgba(239,249,242,.72);margin-bottom:24px}
+    .hero-points{display:flex;flex-wrap:wrap;gap:12px}
     .hero-points span{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.09);
-      color:#e7f8ed;
-      font-size:14px;
-      font-weight:700;
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+      color:#e7f8ed;font-size:14px;font-weight:700
     }
 
-    .panel{
-      border-radius:var(--radius-xl);
-      background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.07));
-      border:1px solid rgba(255,255,255,0.12);
-      padding:28px;
-      box-shadow:var(--shadow-lg);
-      backdrop-filter:blur(8px);
+    .hero-card{
+      border-radius:var(--radius-xl);background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);padding:28px;box-shadow:var(--shadow-lg)
     }
-    .panel-title{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      margin-bottom:16px;
-      flex-wrap:wrap;
-    }
-    .panel-title h2{
-      margin:0;
-      font-size:22px;
-      color:#fff;
-      line-height:1.2;
-    }
+    .hero-card h2{font-size:24px;line-height:1.2;color:#fff;margin-bottom:12px}
+    .hero-card p{color:rgba(239,249,242,.78)}
     .status{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(107,217,163,0.12);
-      border:1px solid rgba(130,226,177,0.18);
-      color:#c0f3d3;
-      font-size:12px;
-      font-weight:800;
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(107,217,163,.12);border:1px solid rgba(130,226,177,.18);color:#c0f3d3;font-size:12px;font-weight:800;margin-bottom:16px
     }
-    .proof-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
+    .trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 22px}
+    .trust-item{padding:18px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .trust-item strong{display:block;color:#fff;font-size:15px;margin-bottom:6px}
+    .trust-item span{display:block;color:rgba(239,249,242,.76);font-size:13px;line-height:1.6}
+    .hero-checklist{display:grid;gap:10px;margin:18px 0 22px}
+    .hero-check{
+      display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)
     }
-    .proof{
-      padding:18px;
-      border-radius:18px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-    .proof strong{
-      display:block;
-      color:#fff;
-      font-size:14px;
-      margin-bottom:6px;
-    }
-    .proof span{
-      display:block;
-      color:rgba(239,249,242,0.78);
-      font-size:13px;
-      line-height:1.6;
-    }
+    .hero-check b{display:block;color:#fff;font-size:15px;margin-bottom:2px}
+    .hero-check span{color:rgba(239,249,242,.78);font-size:14px;line-height:1.55}
+    .check-dot{width:28px;height:28px;flex:0 0 28px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:900;font-size:13px;margin-top:1px}
+    .hero-contact-actions{display:grid;gap:10px}
+    .hero-mini{font-size:13px;color:rgba(239,249,242,.72);margin-top:10px}
 
-    main{display:block}
-
-    .section{
-      padding:90px 0;
-      position:relative;
-      scroll-margin-top:calc(var(--nav-h) + 18px);
-    }
+    .section{padding:90px 0}
     .section-sm{padding-top:0}
-    .section.alt{
-      background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 100%);
-    }
-
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:24px;
-      margin-bottom:30px;
-    }
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,0))}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
     .section-head .copy{max-width:780px}
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      margin-bottom:10px;
-      color:var(--primary-strong);
-      font-weight:900;
-      font-size:13px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .section h2{
-      margin:0;
-      font-size:clamp(30px,4vw,48px);
-      line-height:1.14;
-      letter-spacing:-.03em;
-    }
-    .section-head p{
-      margin:12px 0 0;
-      color:var(--text-soft);
-      font-size:17px;
-      max-width:66ch;
-    }
+    .kicker{display:inline-block;margin-bottom:10px;color:var(--primary-strong);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    .section h2{font-size:clamp(28px,4vw,46px);line-height:1.14;letter-spacing:-.03em}
+    .section-head p{margin-top:12px;color:var(--text-soft);font-size:17px;max-width:68ch}
 
-    .grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid{
-      display:grid;
-      gap:18px;
-    }
+    .grid-2,.grid-3,.grid-4,.service-grid,.flow-grid,.case-grid{display:grid;gap:18px}
     .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .flow-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
     .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .flow-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
     .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
     .card{
-      background:rgba(255,255,255,0.96);
-      border:1px solid rgba(15,23,42,0.06);
-      border-radius:var(--radius-lg);
-      padding:24px;
-      box-shadow:var(--shadow);
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-      min-height:100%;
+      background:rgba(255,255,255,.96);border:1px solid rgba(15,23,42,.06);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow)
     }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 24px 50px rgba(8,20,15,0.12);
-      border-color:rgba(23,155,87,0.16);
-    }
-    .card.dark{
-      background:linear-gradient(180deg, #0d2017 0%, #133426 100%);
-      color:var(--hero-text);
-      border-color:rgba(255,255,255,0.08);
-      box-shadow:var(--shadow-lg);
-    }
-    .card.dark:hover{
-      border-color:rgba(130,226,177,0.22);
-    }
+    .card.dark{background:linear-gradient(180deg,#0d2017 0%,#133426 100%);color:#eef8f1;border-color:rgba(255,255,255,.08);box-shadow:var(--shadow-lg)}
     .icon{
-      width:54px;height:54px;
-      border-radius:18px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg, rgba(23,155,87,0.16), rgba(107,217,163,0.18));
-      color:var(--primary-deep);
-      font-weight:900;
-      font-size:18px;
-      margin-bottom:18px;
-      flex:0 0 auto;
+      width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(23,155,87,.16),rgba(107,217,163,.18));
+      color:var(--primary-deep);font-weight:900;font-size:18px;margin-bottom:18px
     }
-    .card.dark .icon{
-      color:#fff;
-      background:linear-gradient(135deg, rgba(23,155,87,0.22), rgba(107,217,163,0.20));
-    }
-    .card h3{
-      margin:0 0 10px;
-      font-size:22px;
-      line-height:1.25;
-      letter-spacing:-.02em;
-    }
-    .card p,.card li,.card td,.card th{
-      margin:0;
-      color:var(--text-soft);
-      font-size:15px;
-    }
-    .card.dark p,.card.dark li{color:rgba(239,249,242,0.84)}
+    .card.dark .icon{color:#fff;background:linear-gradient(135deg,rgba(23,155,87,.22),rgba(107,217,163,.20))}
+    .card h3{font-size:22px;line-height:1.25;letter-spacing:-.02em;margin-bottom:10px}
+    .card p,.card li,.card td,.card th{color:var(--text-soft);font-size:15px;margin:0}
+    .card.dark p,.card.dark li{color:rgba(239,249,242,.84)}
 
     .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      margin-bottom:14px;
-      padding:7px 11px;
-      border-radius:999px;
-      background:var(--accent-soft);
-      color:var(--primary-deep);
-      font-size:12px;
-      font-weight:800;
+      display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;padding:6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--primary-deep);font-size:12px;font-weight:800
     }
-    .mini-list{
-      list-style:none;
-      padding:0;
-      margin:16px 0 0;
-      display:grid;
-      gap:10px;
-    }
-    .mini-list li{
-      position:relative;
-      padding-left:18px;
-    }
-    .mini-list li::before{
-      content:"";
-      width:8px;height:8px;
-      border-radius:999px;
-      position:absolute;
-      left:0; top:10px;
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);
-      gap:22px;
-      align-items:stretch;
-    }
+    .mini-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+    .mini-list li{position:relative;padding-left:18px}
+    .mini-list li::before{content:"";width:8px;height:8px;border-radius:999px;position:absolute;left:0;top:10px;background:linear-gradient(135deg,var(--primary),var(--accent))}
+    .split{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:22px;align-items:stretch}
     .stack{display:grid;gap:18px}
+    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .tag{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;background:#edf8f1;color:#224f39;border:1px solid #d6ebdd;font-size:13px;font-weight:700}
 
-    .tag-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:18px;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#edf8f1;
-      color:#224f39;
-      border:1px solid #d6ebdd;
-      font-size:13px;
-      font-weight:800;
-    }
+    .why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .qualify-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .qualify-card{padding:22px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .qualify-card strong{display:block;font-size:18px;margin-bottom:8px;letter-spacing:-.02em}
+    .qualify-card p{font-size:14px;color:var(--text-soft)}
 
-    .comparison-wrap{
-      display:grid;
-      gap:16px;
-    }
-    .comparison{
-      overflow-x:auto;
-      border-radius:22px;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      background:#fff;
-    }
-    table{
-      width:100%;
-      border-collapse:collapse;
-      min-width:680px;
-    }
-    th,td{
-      padding:15px 16px;
-      border-bottom:1px solid #e7efe9;
-      text-align:left;
-      vertical-align:top;
-    }
-    th{
-      font-size:13px;
-      color:#284833;
-      background:#f3faf5;
-      font-weight:800;
-    }
-    tbody tr:last-child td{border-bottom:none}
-
+    .comparison{overflow-x:auto;margin-top:8px}
+    table{width:100%;border-collapse:collapse;min-width:680px}
+    th,td{padding:14px 16px;border-bottom:1px solid #e7efe9;text-align:left;vertical-align:top}
+    th{font-size:13px;color:#284833;background:#f3faf5;font-weight:800}
     .comparison-note{
-      padding:18px 20px;
-      border-radius:20px;
-      background:#f3faf5;
-      border:1px solid #d7eadc;
-      box-shadow:var(--shadow);
+      margin-top:14px;padding:18px 20px;border-radius:20px;background:var(--warn);border:1px solid var(--warn-line)
     }
-    .comparison-note strong{
-      display:block;
-      font-size:14px;
-      color:#214c36;
-      margin-bottom:6px;
-    }
-    .comparison-note p{
-      margin:0;
-      color:var(--text-soft);
-      font-size:15px;
-    }
+    .comparison-note strong{display:block;font-size:16px;margin-bottom:6px}
+    .comparison-note p{color:#5d5a4d;font-size:14px}
 
     .price-card{display:grid;gap:14px;align-content:start}
-    .price-hero{
-      padding:24px;
-      border-radius:24px;
-      background:
-        radial-gradient(circle at top right, rgba(107,217,163,0.12), transparent 28%),
-        linear-gradient(135deg, #0d2017, #143628);
-      color:#fff;
-      box-shadow:var(--shadow-lg);
-    }
-    .price-hero strong{
-      display:block;
-      font-size:clamp(30px,5vw,48px);
-      line-height:1.05;
-      letter-spacing:-.03em;
-      margin:8px 0;
-    }
-    .price-hero span,.price-note{
-      color:rgba(239,249,242,0.78);
-      font-size:14px;
-    }
-
-    .flow-step{
-      background:rgba(255,255,255,0.96);
-      border:1px solid rgba(15,23,42,0.06);
-      border-radius:22px;
-      padding:22px;
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .flow-step::before{
-      content:"";
-      position:absolute;
-      left:0; top:0; right:0;
-      height:4px;
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-      opacity:.85;
-    }
-    .step-num{
-      width:34px;height:34px;
-      display:grid;place-items:center;
-      border-radius:999px;
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-      color:#fff;
-      font-size:13px;
-      font-weight:900;
-      margin-bottom:14px;
-    }
-
-    .faq{
-      display:grid;
-      gap:14px;
-      margin-top:24px;
-    }
-    details.faq-item{
-      background:rgba(255,255,255,0.96);
-      border:1px solid rgba(15,23,42,0.06);
-      border-radius:20px;
-      padding:18px 20px;
-      box-shadow:var(--shadow);
-    }
-    details.faq-item[open]{background:#fff}
-    .faq-item summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight:800;
-      color:var(--text);
-      position:relative;
-      padding-right:28px;
-    }
-    .faq-item summary::-webkit-details-marker{display:none}
-    .faq-item summary::after{
-      content:"+";
-      position:absolute;
-      right:0; top:0;
-      color:var(--primary-strong);
-      font-size:22px;
-      line-height:1;
-      font-weight:700;
-    }
-    .faq-item[open] summary::after{content:"–"}
-    .faq-item p{
-      margin:12px 0 0;
-      color:var(--text-soft);
-      font-size:15px;
-    }
+    .price-hero{padding:24px;border-radius:24px;background:linear-gradient(135deg,#0d2017,#143628);color:#fff;box-shadow:var(--shadow-lg)}
+    .price-hero strong{display:block;font-size:clamp(32px,5vw,48px);line-height:1.04;letter-spacing:-.03em;margin:8px 0}
+    .price-hero span,.price-note{color:rgba(239,249,242,.78);font-size:14px}
 
     .cta-band{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(280px, 340px);
-      gap:26px;
-      align-items:center;
-      padding:40px;
-      border-radius:32px;
-      color:var(--hero-text);
+      display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:40px;border-radius:34px;color:#eef8f1;
       background:
-        radial-gradient(circle at 0% 0%, rgba(23,155,87,0.18), transparent 28%),
-        radial-gradient(circle at 100% 100%, rgba(107,217,163,0.16), transparent 30%),
-        linear-gradient(135deg, #07150e 0%, #102b1e 100%);
-      box-shadow:var(--shadow-lg);
-      position:relative;
-      overflow:hidden;
+        radial-gradient(circle at 0% 0%, rgba(23,155,87,.18), transparent 28%),
+        radial-gradient(circle at 100% 100%, rgba(107,217,163,.16), transparent 30%),
+        linear-gradient(135deg,#07150e 0%,#102b1e 100%);
+      box-shadow:var(--shadow-lg)
     }
-    .cta-band::after{
-      content:"";
-      position:absolute;
-      inset:auto -10% -35% auto;
-      width:240px;height:240px;
-      border-radius:999px;
-      background:rgba(107,217,163,0.08);
-      filter:blur(12px);
-      pointer-events:none;
-    }
-    .cta-band h3{
-      margin:0 0 10px;
-      font-size:clamp(28px,4vw,42px);
-      line-height:1.14;
-      letter-spacing:-.03em;
-    }
-    .cta-band p{
-      margin:0;
-      color:rgba(239,249,242,0.82);
-      max-width:62ch;
-    }
-    .contact-box{
-      display:grid;
-      gap:12px;
-      align-content:start;
-      position:relative;
-      z-index:1;
-    }
-    .contact-list{
-      display:grid;
-      gap:14px;
-      margin-top:22px;
-    }
+    .cta-band h3{font-size:clamp(28px,4vw,42px);line-height:1.14;letter-spacing:-.03em;margin-bottom:10px}
+    .cta-band p{color:rgba(239,249,242,.82);max-width:62ch}
+    .cta-band .cta-actions{display:grid;gap:10px;min-width:min(100%,300px)}
+    .contact-list{display:grid;gap:14px;margin-top:22px}
     .contact-item{
-      display:flex;
-      align-items:flex-start;
-      gap:14px;
-      padding:16px 18px;
-      border-radius:18px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.08);
+      display:flex;align-items:flex-start;gap:14px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)
     }
-    .contact-item strong{
-      display:block;
-      color:#fff;
-      font-size:15px;
-      margin-bottom:4px;
-    }
-    .contact-item span{
-      color:rgba(239,249,242,0.76);
-      font-size:14px;
-    }
+    .contact-item strong{display:block;color:#fff;font-size:15px;margin-bottom:4px}
+    .contact-item span{color:rgba(239,249,242,.76);font-size:14px}
 
-    .footer{
-      padding:30px 0 48px;
-      color:#66798a;
-      font-size:14px;
+    .flow-step,.faq-item{
+      background:rgba(255,255,255,.96);border:1px solid rgba(15,23,42,.06);border-radius:22px;padding:22px;box-shadow:var(--shadow)
     }
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:16px;
-      align-items:center;
-      padding-top:24px;
-      border-top:1px solid rgba(15,23,42,0.08);
-    }
+    .step-num{width:34px;height:34px;display:grid;place-items:center;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:13px;font-weight:900;margin-bottom:14px}
+    .faq{display:grid;gap:14px}
+    .faq-item summary{cursor:pointer;font-weight:800;list-style:none}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item p{margin-top:12px;color:var(--text-soft)}
+    .faq-item[open]{border-color:var(--line-strong)}
+
+    .footer{padding:30px 0 96px;color:#66798a;font-size:14px}
+    .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;padding-top:24px;border-top:1px solid rgba(15,23,42,.08)}
 
     .sticky-cta{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:120;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:14px 18px;
-      border-radius:999px;
-      background:linear-gradient(135deg,var(--primary),var(--primary-strong));
-      color:#fff;
-      font-weight:800;
-      box-shadow:0 18px 38px rgba(15,122,67,0.30);
-      transition:transform .2s ease, opacity .2s ease;
+      position:fixed;right:18px;bottom:18px;z-index:120;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-strong));color:#fff;font-weight:800;box-shadow:0 18px 38px rgba(15,122,67,.30)
     }
-    .sticky-cta.is-hidden{
-      opacity:0;
-      pointer-events:none;
-      transform:translateY(12px);
+    .mobile-bar{
+      position:fixed;left:12px;right:12px;bottom:12px;z-index:125;display:none;grid-template-columns:1.2fr .9fr .9fr;gap:10px;padding:10px;border-radius:24px;
+      background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(15,23,42,.08);box-shadow:0 18px 40px rgba(8,20,15,.14)
     }
+    .mobile-bar a{
+      min-height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800
+    }
+    .mobile-bar a.primary{background:linear-gradient(135deg,var(--primary),var(--primary-strong));color:#fff}
+    .mobile-bar a.secondary{background:#fff;color:var(--text);border:1px solid var(--line)}
 
-    .reveal{
-      opacity:0;
-      transform:translateY(18px);
-      transition:opacity .7s ease, transform .7s ease;
-    }
-    .reveal.is-visible{
-      opacity:1;
-      transform:translateY(0);
-    }
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
 
-    @media (max-width: 1100px){
-      .hero-grid,.split,.cta-band,.grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-      .hero-grid,.split,.cta-band{
-        grid-template-columns:1fr;
-      }
-      .flow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:1100px){
+      .hero-grid,.split,.cta-band,.grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid,.why-grid,.qualify-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero-grid,.split,.cta-band,.why-grid{grid-template-columns:1fr}
       .nav-links{display:none}
-      .menu-toggle{display:inline-flex}
-      .nav-actions .desktop-cta{display:none}
+      .menu-toggle{display:flex}
+      .sticky-cta{display:none}
+      .mobile-bar{display:grid}
+      .footer{padding-bottom:118px}
     }
 
-    @media (max-width: 820px){
-      .proof-grid{grid-template-columns:1fr}
-    }
-
-    @media (max-width: 720px){
-      :root{--nav-h:72px}
-      .hero{padding:58px 0 42px}
+    @media (max-width:720px){
+      .hero{padding:66px 0 46px}
       .section{padding:68px 0}
-      .container{width:min(calc(100% - 24px), var(--container))}
-      .grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid{grid-template-columns:1fr}
-      .nav{min-height:72px}
+      .container{width:min(calc(100% - 24px),var(--container))}
+      .trust-grid,.grid-2,.grid-3,.grid-4,.flow-grid,.service-grid,.case-grid,.qualify-grid{grid-template-columns:1fr}
+      .nav{min-height:70px}
       .brand{font-size:14px}
-      .brand-mark{width:38px;height:38px;border-radius:12px;font-size:16px;flex-basis:38px}
-      h1{font-size:clamp(31px,10vw,44px)}
+      .brand-mark{width:38px;height:38px;flex-basis:38px;border-radius:12px}
+      h1{font-size:clamp(30px,10vw,44px)}
       .lead,.section-head p{font-size:16px}
       .hero-actions{flex-direction:column}
       .btn{width:100%}
       .hero-points span,.tag{width:100%}
-      .panel,.card,.flow-step,.cta-band,.price-hero,.contact-item{padding:20px}
-      .section-head{margin-bottom:24px}
-      .section h2{font-size:clamp(26px,8vw,34px)}
-      .mobile-menu{inset:72px 0 auto 0}
-      .sticky-cta{
-        left:16px;
-        right:16px;
-        justify-content:center;
-        bottom:14px;
-      }
-      .comparison{
-        border-radius:18px;
-      }
-      table, thead, tbody, tr, th, td{
-        display:block;
-        min-width:0;
-        width:100%;
-      }
-      thead{
-        position:absolute;
-        width:1px;
-        height:1px;
-        overflow:hidden;
-        clip:rect(0 0 0 0);
-        white-space:nowrap;
-      }
-      tbody{
-        display:grid;
-        gap:12px;
-        padding:12px;
-      }
-      tr{
-        border:1px solid var(--line);
-        border-radius:16px;
-        overflow:hidden;
-        background:#fff;
-      }
-      td{
-        border-bottom:1px solid #eef4ef;
-        padding:12px 14px;
-      }
-      td:last-child{border-bottom:none}
-      td::before{
-        content:attr(data-label);
-        display:block;
-        font-size:12px;
-        font-weight:800;
-        letter-spacing:.04em;
-        color:var(--primary-strong);
-        text-transform:uppercase;
-        margin-bottom:4px;
-      }
+      .hero-card,.card,.flow-step,.faq-item,.cta-band,.price-hero,.qualify-card,.comparison-note{padding:20px}
+      .cta-band .cta-actions{min-width:0}
+      .mobile-bar{grid-template-columns:1fr 1fr 1fr;left:10px;right:10px;bottom:10px;padding:8px}
+      .mobile-bar a{font-size:13px}
+      table{min-width:100%}
+      .comparison{overflow:visible}
+      .comparison table,.comparison thead,.comparison tbody,.comparison th,.comparison td,.comparison tr{display:block}
+      .comparison thead{display:none}
+      .comparison tr{border:1px solid var(--line);border-radius:18px;padding:8px 0;margin-top:12px;background:#fff;box-shadow:var(--shadow)}
+      .comparison td{border:none;padding:8px 16px}
+      .comparison td:first-child{padding-top:16px;font-weight:800;color:var(--text)}
+      .comparison td::before{content:attr(data-label);display:block;font-size:12px;font-weight:800;color:var(--primary-strong);margin-bottom:2px}
+      .comparison td:first-child::before{color:var(--text-faint)}
     }
 
-    @media (max-width: 540px){
+    @media (max-width:540px){
       .eyebrow{font-size:12px;padding:7px 12px}
+      .section h2,.cta-band h3{font-size:clamp(24px,8vw,32px)}
       .card h3{font-size:20px}
-      .panel,.card,.flow-step,.cta-band,.price-hero,.contact-item{
-        border-radius:20px;
-        padding:18px;
-      }
-      .cta-band h3{font-size:clamp(24px,8vw,32px)}
-      .brand-label small{font-size:10px}
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      html{scroll-behavior:auto}
-      .reveal,.card,.btn,.menu-toggle,.sticky-cta,.nav-links a::after{
-        transition:none !important;
-      }
+      .hero-card,.card,.flow-step,.faq-item,.cta-band,.price-hero,.qualify-card{border-radius:20px;padding:18px}
+      .mobile-bar a{min-height:44px}
     }
   </style>
 </head>
@@ -953,7 +333,7 @@
 
   <div class="nav-wrap">
     <div class="container nav">
-      <a href="#top" class="brand" aria-label="株式会社4U ロープアクセス専門施工">
+      <a href="#top" class="brand" aria-label="ページ上部へ戻る">
         <span class="brand-mark">4U</span>
         <span class="brand-label">
           <small>Rope Access Specialist</small>
@@ -961,34 +341,30 @@
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="主要メニュー">
-        <a href="#problem">課題</a>
-        <a href="#solution">解決策</a>
-        <a href="#service">対応工事</a>
-        <a href="#safety">安全の根拠</a>
-        <a href="#cost">料金の考え方</a>
+      <div class="nav-links" aria-label="主要セクション">
+        <a href="#fit">向いている案件</a>
+        <a href="#compare">足場との比較</a>
+        <a href="#proof">安全・信頼</a>
         <a href="#faq">よくある質問</a>
         <a href="#contact">お問い合わせ</a>
-      </nav>
+      </div>
 
       <div class="nav-actions">
-        <a class="btn btn-primary desktop-cta" href="#contact">相談する</a>
+        <a class="btn btn-primary" href="#contact">相談する</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
+  </div>
 
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <div class="mobile-menu-inner">
-        <a href="#problem">課題</a>
-        <a href="#solution">解決策</a>
-        <a href="#service">対応工事</a>
-        <a href="#safety">安全の根拠</a>
-        <a href="#cost">料金の考え方</a>
-        <a href="#faq">よくある質問</a>
-        <a href="#contact" class="mobile-primary">お問い合わせ</a>
-      </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-inner">
+      <a href="#fit">向いている案件</a>
+      <a href="#compare">足場との比較</a>
+      <a href="#proof">安全・信頼</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact" class="mobile-primary">相談する</a>
     </div>
   </div>
 
@@ -996,17 +372,14 @@
     <div class="container hero-grid">
       <div class="reveal">
         <div class="eyebrow">足場を組むほどではない高所作業に</div>
-        <h1>
-          足場を組まずに、<br />
-          <span class="grad">必要な高所作業だけを解決。</span>
-        </h1>
+        <h1>足場を組まずに、<br><span class="grad">必要な高所作業だけを解決。</span></h1>
         <p class="lead">
           外壁調査、部分補修、漏水補修、設備工事まで。ロープアクセス専門施工で、
           発注責任者が抱える「小規模なのに大がかりになる」高所作業を、安全かつ迅速に合理化します。
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">現場の相談をする</a>
-          <a class="btn btn-secondary" href="#cost">費用の考え方を見る</a>
+          <a class="btn btn-secondary" href="#compare">足場との違いを見る</a>
         </div>
         <p class="microcopy">全国出張可能 / 電話受付 9:00〜18:00 / 写真があれば概算相談しやすくなります</p>
         <div class="hero-points" aria-label="特徴">
@@ -1017,81 +390,112 @@
         </div>
       </div>
 
-      <aside class="panel reveal" aria-label="選ばれる根拠">
-        <div class="panel-title">
-          <h2>選ばれる根拠</h2>
-          <span class="status">ロープアクセス専門</span>
-        </div>
-        <div class="proof-grid">
-          <div class="proof">
+      <aside class="hero-card reveal" aria-label="最初に伝える判断材料">
+        <span class="status">問い合わせ前に判断しやすい情報を先に整理</span>
+        <h2>まず確認したいことを、右側に集約しました。</h2>
+        <p>問い合わせ獲得を優先するため、最初に「対象案件かどうか」「信頼できるか」「相談しやすいか」が分かる構成にしています。</p>
+
+        <div class="trust-grid" aria-label="信頼指標">
+          <div class="trust-item">
             <strong>創業15年・墜落災害ゼロ</strong>
             <span>安全性を最優先する運用体制を継続。現場での安心感を数値で支えます。</span>
           </div>
-          <div class="proof">
+          <div class="trust-item">
             <strong>26名体制・自社施工100％</strong>
             <span>下請け丸投げなし。品質・機動力・緊急対応を自社で完結します。</span>
           </div>
-          <div class="proof">
+          <div class="trust-item">
             <strong>ISO9001・JIRAA</strong>
             <span>品質マネジメントとロープアクセス技術の両面から、信頼の根拠を明確化。</span>
           </div>
-          <div class="proof">
+          <div class="trust-item">
             <strong>年500件超の現場対応</strong>
             <span>外壁、漏水、設備、看板、プラントなど多様な高所作業に対応しています。</span>
           </div>
         </div>
+
+        <div class="hero-checklist" aria-label="相談前のハードルを下げる情報">
+          <div class="hero-check">
+            <div class="check-dot">1</div>
+            <div><b>相談だけでも可能</b><span>対応可否の整理だけでも進められます。</span></div>
+          </div>
+          <div class="hero-check">
+            <div class="check-dot">2</div>
+            <div><b>写真があれば概算相談しやすい</b><span>所在地・対象箇所・緊急度が分かると判断が速くなります。</span></div>
+          </div>
+          <div class="hero-check">
+            <div class="check-dot">3</div>
+            <div><b>足場が有利な場合も案内</b><span>ロープアクセスが不向きなケースも含めて比較しながら案内します。</span></div>
+          </div>
+        </div>
+
+        <div class="hero-contact-actions">
+          <a class="btn btn-light" href="#contact">問い合わせ方法を見る</a>
+          <a class="btn btn-secondary" href="tel:0424480315">電話で相談する</a>
+        </div>
+        <p class="hero-mini">相談時にあるとスムーズな情報：現場の所在地 / 建物用途 / 対象箇所 / 写真 / 緊急度 / 希望時期</p>
       </aside>
     </div>
   </header>
 
   <main id="main">
-    <section class="section reveal" id="problem">
+    <section class="section reveal" id="fit">
       <div class="container">
         <div class="section-head">
           <div class="copy">
-            <span class="kicker">Problem</span>
-            <h2>部分的な高所作業なのに、従来工法だと大がかりすぎる。</h2>
+            <span class="kicker">Fit First</span>
+            <h2>最初に「向いている案件か」を判断しやすく。</h2>
             <p>
-              一部だけ調査したい。必要箇所だけ直したい。そんな現場でも、足場を前提にするとコスト・工期・周辺影響が大きくなり、発注判断そのものが重くなります。
+              問い合わせ獲得では、詳しい説明より先に「うちの案件は相談対象か」を早く判断できることが重要です。
+              そのため、適合度の高い案件を先に明示しています。
             </p>
           </div>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="icon">¥</div>
-            <h3>コストが大きい</h3>
-            <p>部分作業でも足場の設置・解体費が発生し、必要以上に予算が膨らみやすい。</p>
+        <div class="qualify-grid">
+          <article class="qualify-card">
+            <strong>部分補修</strong>
+            <p>全面改修ではなく、必要箇所だけを早く直したい案件。</p>
           </article>
-          <article class="card">
-            <div class="icon">⏱</div>
-            <h3>工期が伸びる</h3>
-            <p>着工までの段取りが重く、緊急性の高い補修や調査ほどスピードを出しにくい。</p>
+          <article class="qualify-card">
+            <strong>足場が大がかり</strong>
+            <p>仮設費が重く、小規模工事に対して合理性が低い案件。</p>
           </article>
-          <article class="card">
-            <div class="icon">◎</div>
-            <h3>現場調整が増える</h3>
-            <p>狭小地、通行人、住人、テナントへの配慮が増え、周辺との調整負荷も大きくなる。</p>
+          <article class="qualify-card">
+            <strong>狭小地・営業中施設</strong>
+            <p>周辺調整が多く、足場設置の影響を抑えたい案件。</p>
           </article>
+          <article class="qualify-card">
+            <strong>緊急対応</strong>
+            <p>剥落・漏水・設備不具合など、早期の確認や応急対応が必要な案件。</p>
+          </article>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">ビル管理会社</span>
+          <span class="tag">建設会社・ゼネコン</span>
+          <span class="tag">外壁補修会社</span>
+          <span class="tag">設備工事会社</span>
+          <span class="tag">管理組合</span>
+          <span class="tag">物件オーナー</span>
         </div>
       </div>
     </section>
 
-    <section class="section section-sm alt reveal" id="solution">
+    <section class="section section-sm alt reveal" id="why">
       <div class="container">
-        <div class="split">
+        <div class="why-grid">
           <article class="card dark">
-            <span class="badge">Concept</span>
-            <h2 style="margin:0 0 16px; font-size: clamp(28px, 4vw, 44px);">足場を組まずに、<br />必要な高所作業だけを解決。</h2>
+            <span class="badge">Reason to Act</span>
+            <h2 style="margin:0 0 16px; font-size:clamp(28px,4vw,44px);">部分的な高所作業なのに、従来工法だと大がかりすぎる。</h2>
             <p>
-              ロープアクセス工法により、足場を組むほどではない高所作業へピンポイントで対応。
-              必要な箇所だけを、安全かつ迅速に施工します。
+              一部だけ調査したい。必要箇所だけ直したい。そんな現場でも、足場を前提にするとコスト・工期・周辺影響が大きくなり、発注判断そのものが重くなります。
             </p>
             <ul class="mini-list">
-              <li>足場を組まずに高所へアクセス</li>
-              <li>必要箇所だけのピンポイント施工</li>
-              <li>外壁調査・部分補修・漏水補修に短期間で対応</li>
-              <li>狭小地やアクセス困難な場所でも対応可能</li>
+              <li>部分作業でも足場の設置・解体費が発生しやすい</li>
+              <li>緊急性が高い補修ほどスピードを出しにくい</li>
+              <li>狭小地、通行人、住人、テナントへの調整が増える</li>
+              <li>小規模案件なのに社内説明の負荷が高くなる</li>
             </ul>
           </article>
 
@@ -1105,11 +509,18 @@
               </p>
             </article>
             <article class="card">
-              <span class="badge">Fit</span>
-              <h3>こんな案件で強い</h3>
+              <span class="badge">Use Cases</span>
+              <h3>相談されやすい案件例</h3>
               <p>
                 外壁調査、打診調査、部分補修、シーリング、ヒビ割れ補修、漏水調査・補修、看板・照明・配管など、
                 足場を組むほどではない高所作業に向いています。
+              </p>
+            </article>
+            <article class="card">
+              <span class="badge">Fast Path</span>
+              <h3>相談時に必要な情報は多くありません</h3>
+              <p>
+                写真、対象箇所、所在地、希望時期が分かれば、初回相談の入口として十分です。情報が足りない場合は、現地下見を含めて整理できます。
               </p>
             </article>
           </div>
@@ -1117,14 +528,110 @@
       </div>
     </section>
 
-    <section class="section reveal" id="service">
+    <section class="section reveal" id="compare">
       <div class="container">
         <div class="section-head">
           <div class="copy">
-            <span class="kicker">Service</span>
-            <h2>対応できる工事を、最初から具体的に。</h2>
+            <span class="kicker">Compare Early</span>
+            <h2>問い合わせを後押しするのは、比較材料の明確さです。</h2>
             <p>
-              LP訪問者が「うちの案件も頼めるのか」をすぐ判断できるように、相談されやすい工事領域を明確化しています。
+              説得よりも先に、比較しやすい情報を見せる構成にしています。小規模・部分的な高所作業では、
+              足場が不要な分、トータル費用と工期で優位になりやすいのがロープアクセスの特徴です。
+            </p>
+          </div>
+        </div>
+
+        <div class="split">
+          <div>
+            <article class="card">
+              <span class="badge">Comparison</span>
+              <h3>足場設置とロープアクセスの考え方</h3>
+              <div class="comparison">
+                <table aria-label="足場設置とロープアクセスの比較表">
+                  <thead>
+                    <tr>
+                      <th>比較項目</th>
+                      <th>足場設置</th>
+                      <th>ロープアクセス</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="比較項目">小規模・ピンポイント工事</td>
+                      <td data-label="足場設置">仮設費が重くなりやすい</td>
+                      <td data-label="ロープアクセス">必要箇所だけ施工しやすい</td>
+                    </tr>
+                    <tr>
+                      <td data-label="比較項目">工期</td>
+                      <td data-label="足場設置">設置・撤去を含め長くなりやすい</td>
+                      <td data-label="ロープアクセス">短工期で完了しやすい</td>
+                    </tr>
+                    <tr>
+                      <td data-label="比較項目">狭小地・特殊形状</td>
+                      <td data-label="足場設置">制約を受けやすい</td>
+                      <td data-label="ロープアクセス">対応しやすい</td>
+                    </tr>
+                    <tr>
+                      <td data-label="比較項目">全面改修</td>
+                      <td data-label="足場設置">足場のほうが有利な場合もある</td>
+                      <td data-label="ロープアクセス">部分改修で特に強みを発揮</td>
+                    </tr>
+                    <tr>
+                      <td data-label="比較項目">営業中施設への影響</td>
+                      <td data-label="足場設置">周辺調整が増えやすい</td>
+                      <td data-label="ロープアクセス">影響を抑えやすい</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <div class="comparison-note">
+              <strong>初期段階で比較しておくことが重要です</strong>
+              <p>
+                施工方法の選択は、その後の段取りやコスト感に大きく影響します。部分補修や小規模な高所作業では、
+                足場を前提に進める前にロープアクセスの適性を確認しておくと、より合理的に判断しやすくなります。
+              </p>
+            </div>
+          </div>
+
+          <div class="price-card">
+            <div class="price-hero">
+              <span>小さな高所案件の相談ハードルを下げる</span>
+              <strong>1DAY施工<br>目安 10万円</strong>
+              <span>1日2名体制の工事目安。材料費・警備員・諸経費は別途、内容により変動します。</span>
+            </div>
+            <article class="card">
+              <h3>こんな工事に</h3>
+              <ul class="mini-list">
+                <li>塗装・防水</li>
+                <li>雨漏り調査・補修</li>
+                <li>ヒビ割れ補修</li>
+                <li>シーリング打ち替え</li>
+                <li>配管などの軽微な設備工事</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>問い合わせ前に伝わること</h3>
+              <ul class="mini-list">
+                <li>費用感の下限イメージが持てる</li>
+                <li>部分工事に向く理由が比較で分かる</li>
+                <li>現場条件が合えば早く相談判断できる</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm alt reveal" id="service">
+      <div class="container">
+        <div class="section-head">
+          <div class="copy">
+            <span class="kicker">Service Scope</span>
+            <h2>対応できる工事を具体的に見せ、問い合わせ迷いを減らす。</h2>
+            <p>
+              「うちの案件も頼めるのか」をここで明確にします。問い合わせ直前で迷わせないため、相談されやすい工事領域を先に絞って見せています。
             </p>
           </div>
         </div>
@@ -1159,26 +666,17 @@
             </ul>
           </article>
         </div>
-
-        <div class="tag-row">
-          <span class="tag">ビル管理会社</span>
-          <span class="tag">建設会社・ゼネコン</span>
-          <span class="tag">外壁補修会社</span>
-          <span class="tag">設備工事会社</span>
-          <span class="tag">管理組合</span>
-          <span class="tag">物件オーナー</span>
-        </div>
       </div>
     </section>
 
-    <section class="section section-sm alt reveal" id="safety">
+    <section class="section reveal" id="proof">
       <div class="container">
         <div class="section-head">
           <div class="copy">
-            <span class="kicker">Safety</span>
-            <h2>“任せて大丈夫か”に、根拠で答える。</h2>
+            <span class="kicker">Proof &amp; Safety</span>
+            <h2>問い合わせ直前の主要な障壁は、安全性と発注責任です。</h2>
             <p>
-              BtoBの発注では、価格より先に安全と信頼が見られます。だからこそ、独自の安全管理、資格、品質体制を前面に出しています。
+              そこで、価格より前に確認されやすい「任せて大丈夫か」をここで解消します。安全管理、資格、体制、実務力をまとめて見せています。
             </p>
           </div>
         </div>
@@ -1194,6 +692,7 @@
             </ul>
             <p style="margin-top:16px;">最低2名体制、レスキュー体制、第三者災害防止対策まで含めて現場を運用します。</p>
           </article>
+
           <article class="card dark">
             <span class="badge">JIRAA / ISO9001</span>
             <h3>技術と品質を両輪で管理</h3>
@@ -1229,162 +728,14 @@
       </div>
     </section>
 
-    <section class="section reveal" id="cost">
+    <section class="section section-sm alt reveal" id="flow">
       <div class="container">
         <div class="section-head">
           <div class="copy">
-            <span class="kicker">Cost &amp; Speed</span>
-            <h2>料金の見え方まで整理すると、相談されやすくなる。</h2>
+            <span class="kicker">Low Friction Flow</span>
+            <h2>問い合わせのハードルを下げるため、流れは4ステップだけ。</h2>
             <p>
-              ロープアクセスは作業単価だけを見ると割高に見えることがあります。ですが、小規模・部分的な高所作業では、足場が不要な分、トータル費用と工期で優位になりやすいのが特徴です。
-            </p>
-          </div>
-        </div>
-
-        <div class="split">
-          <div class="comparison-wrap">
-            <div class="card">
-              <span class="badge">Comparison</span>
-              <h3>足場設置とロープアクセスの考え方</h3>
-              <div class="comparison">
-                <table aria-label="足場設置とロープアクセスの比較表">
-                  <thead>
-                    <tr>
-                      <th>比較項目</th>
-                      <th>足場設置</th>
-                      <th>ロープアクセス</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td data-label="比較項目">小規模・ピンポイント工事</td>
-                      <td data-label="足場設置">仮設費が重くなりやすい</td>
-                      <td data-label="ロープアクセス">必要箇所だけ施工しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">工期</td>
-                      <td data-label="足場設置">設置・撤去を含め長くなりやすい</td>
-                      <td data-label="ロープアクセス">短工期で完了しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">狭小地・特殊形状</td>
-                      <td data-label="足場設置">制約を受けやすい</td>
-                      <td data-label="ロープアクセス">対応しやすい</td>
-                    </tr>
-                    <tr>
-                      <td data-label="比較項目">全面改修</td>
-                      <td data-label="足場設置">足場のほうが有利な場合もある</td>
-                      <td data-label="ロープアクセス">部分改修で特に強みを発揮</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="comparison-note">
-              <strong>初期段階で比較しておくことが重要です</strong>
-              <p>
-                施工方法の選択は、その後の段取りやコスト感に大きく影響します。部分補修や小規模な高所作業では、
-                足場を前提に進める前にロープアクセスの適性を確認しておくと、より合理的に判断しやすくなります。
-              </p>
-            </div>
-          </div>
-
-          <div class="price-card">
-            <div class="price-hero">
-              <span>小さな高所案件の相談ハードルを下げる</span>
-              <strong>1DAY施工<br />目安 10万円</strong>
-              <span>1日2名体制の工事目安。材料費・警備員・諸経費は別途、内容により変動します。</span>
-            </div>
-            <article class="card">
-              <h3>こんな工事に</h3>
-              <ul class="mini-list">
-                <li>塗装・防水</li>
-                <li>雨漏り調査・補修</li>
-                <li>ヒビ割れ補修</li>
-                <li>シーリング打ち替え</li>
-                <li>配管などの軽微な設備工事</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-sm alt reveal" id="cases">
-      <div class="container">
-        <div class="section-head">
-          <div class="copy">
-            <span class="kicker">Use Cases</span>
-            <h2>ロープアクセスが特に強い現場</h2>
-            <p>
-              足場が掛けづらい、特殊形状、既存設備が邪魔をする、緊急対応が必要。こうした現場ほどロープアクセスの機動力が活きます。
-            </p>
-          </div>
-        </div>
-
-        <div class="case-grid">
-          <article class="card">
-            <h3>足場が掛けられない環境</h3>
-            <p>足場を立てるスペースがない、壁が斜め、着地が難しい環境でも対応しやすい工法です。</p>
-          </article>
-          <article class="card">
-            <h3>迅速な緊急対応</h3>
-            <p>剥落しそうなタイル、錆びた鉄部、落下リスクのある設備など、応急処置を急ぐ案件に。</p>
-          </article>
-          <article class="card">
-            <h3>正確な外壁調査</h3>
-            <p>近接での目視・触診・打診調査により、危険箇所や漏水箇所を丁寧に特定します。</p>
-          </article>
-          <article class="card">
-            <h3>設備・プラント・インフラ</h3>
-            <p>看板、照明、配管、プラントなど、複雑な構造や高所設備にも機動的に対応します。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="effects">
-      <div class="container">
-        <div class="section-head">
-          <div class="copy">
-            <span class="kicker">After</span>
-            <h2>導入後に得られる変化も、先に見せる。</h2>
-            <p>
-              ロープアクセスの価値は「施工できること」だけではありません。発注判断のしやすさ、着手までの速さ、
-              そして現場全体の負担軽減まで含めて価値になります。
-            </p>
-          </div>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="icon">↓</div>
-            <h3>無駄なコストを抑えやすい</h3>
-            <p>部分的な高所作業に足場を掛ける必要がなくなり、作業範囲以上に費用が膨らみにくくなります。</p>
-          </article>
-          <article class="card">
-            <div class="icon">⚡</div>
-            <h3>着手までが早い</h3>
-            <p>仮設・解体の工程を大きく省けるため、急ぎの調査や補修でも判断から施工まで進めやすくなります。</p>
-          </article>
-          <article class="card">
-            <div class="icon">◎</div>
-            <h3>社内説明がしやすい</h3>
-            <p>「なぜこの方法を選ぶのか」が整理しやすく、管理会社・元請け・オーナーへの説明材料としても使いやすくなります。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt reveal" id="flow">
-      <div class="container">
-        <div class="section-head">
-          <div class="copy">
-            <span class="kicker">Flow</span>
-            <h2>相談から施工まで、判断しやすく。</h2>
-            <p>
-              現場写真があれば概算相談もしやすくなります。まずは「ロープアクセスで対応可能か」を確認するところから始められます。
+              問い合わせ後の流れが明確なほど、初回相談の心理的負担は下がります。まずは「ロープアクセスで対応可能か」を確認するところから始められます。
             </p>
           </div>
         </div>
@@ -1414,39 +765,46 @@
       </div>
     </section>
 
-    <section class="section section-sm reveal" id="faq">
+    <section class="section reveal" id="faq">
       <div class="container">
         <div class="section-head">
           <div class="copy">
             <span class="kicker">FAQ</span>
-            <h2>相談前に気になりやすい点を、先に解消する。</h2>
+            <h2>最後の離脱要因を、問い合わせ直前で潰す。</h2>
             <p>
               初めてロープアクセスを検討する発注者が気にしやすいポイントを、事前に整理しています。
-              「まず相談だけでもいいのか」「安全性はどう考えるのか」といった不安を減らすための項目です。
+              「まず相談だけでもいいのか」「安全性はどう考えるのか」「足場の方が良いケースはあるか」といった疑問に答えます。
             </p>
           </div>
         </div>
 
         <div class="faq">
-          <details class="faq-item">
+          <details class="faq-item" open>
             <summary>ロープアクセスは本当に安全ですか？</summary>
             <p>
               現場条件に応じた安全計画、最低2名体制、レスキューを想定した運用、第三者災害防止まで含めて計画します。
               工法そのものではなく、体制と運用まで含めて安全性を担保する考え方です。
             </p>
           </details>
-          <details class="faq-item">
-            <summary>どんな現場でもロープアクセスが向いていますか？</summary>
-            <p>
-              すべての現場でロープアクセスが最適とは限りません。部分補修、狭小地、アクセス困難箇所、
-              営業中施設、緊急対応など、足場が大がかりになりやすい現場で特に強みを発揮します。
-            </p>
-          </details>
-          <details class="faq-item">
+          <details class="faq-item" open>
             <summary>まず相談だけでも可能ですか？</summary>
             <p>
               可能です。写真や現場概要があれば、ロープアクセスで対応しやすいかどうかの判断材料を整理しやすくなります。
               必要に応じて、足場を含む他の方法と比較しながら検討いただけます。
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>どんな現場でもロープアクセスが向いていますか？</summary>
+            <p>
+              すべての現場でロープアクセスが最適とは限りません。部分補修、狭小地、アクセス困難箇所、営業中施設、緊急対応など、
+              足場が大がかりになりやすい現場で特に強みを発揮します。
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>概算の相談はできますか？</summary>
+            <p>
+              写真、対象箇所、所在地、希望時期が分かれば、概算の方向性を整理しやすくなります。
+              ただし正式見積もりは現場条件や数量確認後となります。
             </p>
           </details>
         </div>
@@ -1487,7 +845,7 @@
             </div>
           </div>
 
-          <div class="contact-box">
+          <div class="cta-actions">
             <a class="btn btn-primary" href="https://4-u.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
             <a class="btn btn-secondary" href="tel:0424480315">電話で相談する</a>
             <a class="btn btn-light" href="https://page.line.me/603lexbt" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
@@ -1506,6 +864,11 @@
   </footer>
 
   <a href="#contact" class="sticky-cta" id="stickyCta">相談する</a>
+  <div class="mobile-bar" id="mobileBar" aria-label="モバイル固定操作">
+    <a href="#contact" class="primary">相談する</a>
+    <a href="tel:0424480315" class="secondary">電話</a>
+    <a href="https://page.line.me/603lexbt" target="_blank" rel="noopener noreferrer" class="secondary">LINE</a>
+  </div>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
@@ -1555,16 +918,20 @@
     }
 
     const stickyCta = document.getElementById('stickyCta');
-    const contactSection = document.getElementById('contact');
+    const mobileBar = document.getElementById('mobileBar');
+    const contact = document.getElementById('contact');
 
-    if (stickyCta && contactSection) {
-      const ctaObserver = new IntersectionObserver((entries) => {
+    if (contact) {
+      const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          stickyCta.classList.toggle('is-hidden', entry.isIntersecting);
+          const hidden = entry.isIntersecting;
+          if (stickyCta) stickyCta.style.opacity = hidden ? '0' : '1';
+          if (stickyCta) stickyCta.style.pointerEvents = hidden ? 'none' : 'auto';
+          if (mobileBar) mobileBar.style.opacity = hidden ? '0' : '1';
+          if (mobileBar) mobileBar.style.pointerEvents = hidden ? 'none' : 'auto';
         });
-      }, { threshold: 0.1 });
-
-      ctaObserver.observe(contactSection);
+      }, { threshold: 0.18 });
+      io.observe(contact);
     }
   </script>
 </body>
